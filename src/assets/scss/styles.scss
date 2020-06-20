@@ -27,13 +27,39 @@ $dark: #3d3d3d;
 body {
   font-family: "Encode Sans Condensed", sans-serif;
 }
+.navbar-light {
+  .navbar-nav {
+    .nav-link {
+      color: #000;
+      font-size: 20px;
+      font-weight: 400;
+    }
+  }
+  .logo {
+    height: 50px;
+  }
+  transition: all 200ms ease-in-out;
+  box-shadow: 0 3px 5px -2px rgba(144, 144, 144, 0.2);
+}
 
+.fixed-header {
+  position: fixed !important;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 5;
+  background-color: rgba(255, 255, 255, 0.98) !important;
+}
 .weight300 {
   font-weight: 300;
+}
+.btn {
+  border-radius: 0;
 }
 #intro {
   background-image: url(../images/technology-1283624_1920.jpg);
   background-size: cover;
+  background-attachment: fixed;
   position: relative;
   min-height: 100vh;
   padding: 100px 0 50px 0;
@@ -72,12 +98,21 @@ body {
 }
 
 #contact {
-  padding: 50px 0;
+  padding: 50px 0 0 0;
+  .social a {
+    color: #fff;
+    &:hover {
+      color: darken($color: #f7f7f7, $amount: 9);
+    }
+  }
 }
 section {
   .section-title {
     margin-bottom: 40px;
   }
+}
+.bg-black {
+  background: #000;
 }
 .bar-border {
   border: 1px solid #fff;
@@ -465,5 +500,88 @@ section {
   }
   .main-timeline9 .description {
     text-align: center;
+  }
+}
+
+/* ANIMATIONS
+–––––––––––––––––––––––––––––––––––––––––––––––––– */
+.navbar-light .container > *,
+#intro {
+  opacity: 0;
+}
+
+.navbar-light,
+.page-footer,
+#intro .text-wrapper {
+  overflow: hidden;
+}
+
+.navbar-light .container > * {
+  transform: translateY(-30px);
+}
+
+.navbar-light {
+  position: relative;
+}
+
+.navbar-light ::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 2px;
+  background: var(--main-purple-color);
+  z-index: 99999;
+  transform: scaleX(0);
+}
+
+#intro .text-wrapper + .text-wrapper {
+  margin-top: 10px;
+}
+
+#intro .text-wrapper * {
+  transform: translateY(120%);
+}
+
+#intro .lead_text * {
+  transform: translateY(-120%);
+}
+
+.loaded .navbar-light ::after {
+  animation: scaleIn 1.3s ease-in 0.2s forwards;
+}
+
+.loaded #intro {
+  animation: fadeIn 1s ease-in 0.7s forwards;
+}
+
+.loaded .navbar-light .container > * {
+  animation: fadeIn 1s ease-in 0.7s forwards, slideIn 0.8s ease-in 0.9s forwards;
+}
+
+.loaded #intro .text-wrapper * {
+  animation: slideIn 0.6s cubic-bezier(0.54, 0.46, 0.54, 0.94) 2s forwards;
+}
+
+@keyframes fadeIn {
+  60% {
+    opacity: 0;
+  }
+
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes scaleIn {
+  100% {
+    transform: scaleX(1);
+  }
+}
+
+@keyframes slideIn {
+  100% {
+    transform: translateY(0);
   }
 }

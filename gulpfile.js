@@ -32,13 +32,15 @@ function scssTask() {
 
 // JS task: concatenates and uglifies JS files to script.js
 function jsTask() {
-  return src([
-    files.jsPath,
-    //,'!' + 'includes/js/jquery.min.js', // to exclude any specific files
-  ])
-    .pipe(concat("all.js"))
-    .pipe(uglify())
-    .pipe(dest("dist/js"));
+  return (
+    src([
+      files.jsPath,
+      //,'!' + 'includes/js/jquery.min.js', // to exclude any specific files
+    ])
+      .pipe(concat("all.js"))
+      // .pipe(uglify())
+      .pipe(dest("dist/js"))
+  );
 }
 
 // Cachebust
@@ -75,7 +77,8 @@ function watchTask() {
 // Runs the scss and js tasks simultaneously
 // then runs cacheBust, then watch task
 exports.default = series(
-  parallel(scssTask, jsTask, imgTask),
+  parallel(scssTask, jsTask),
+  imgTask,
   cacheBustTask,
   watchTask
 );
