@@ -1,5 +1,5 @@
 $theme-colors: (
-  "primary": hsl(0, 0%, 10%),
+  "primary": hsl(0, 0%, 0%),
   "dark": rgb(19, 19, 19),
 );
 
@@ -33,6 +33,11 @@ body {
       color: #000;
       font-size: 20px;
       font-weight: 400;
+      position: relative;
+      &.active {
+        border-bottom: 2px solid #000;
+        color: #34495e;
+      }
     }
   }
   .logo {
@@ -56,8 +61,12 @@ body {
 .btn {
   border-radius: 0;
 }
+.btn-primary:hover {
+  background: #fff;
+  color: #000;
+}
 #intro {
-  background-image: url(../images/technology-1283624_1920.jpg);
+  background-image: url(../images/intro-bg.jpg);
   background-size: cover;
   background-attachment: fixed;
   position: relative;
