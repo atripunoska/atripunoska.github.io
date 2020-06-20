@@ -34,11 +34,23 @@ strong {
   .navbar-nav {
     .nav-link {
       color: #000;
-      font-size: 20px;
+      font-size: 16px;
       font-weight: 400;
       position: relative;
       padding: 0;
-      margin: 0 15px;
+      margin: 0 10px;
+      @include media-breakpoint-up(md) {
+        font-size: 20px;
+        font-weight: 400;
+        position: relative;
+        padding: 0;
+        margin: 0 15px;
+      }
+      @include media-breakpoint-down(sm) {
+        font-size: 14px;
+        margin: 0 5px 0 5px;
+      }
+
       &:last-of-type {
         margin-right: 0;
       }
@@ -50,6 +62,9 @@ strong {
   }
   .logo {
     height: 50px;
+    @include media-breakpoint-down(sm) {
+      height: 35px;
+    }
   }
   transition: all 200ms ease-in-out;
   box-shadow: 0 3px 5px -2px rgba(144, 144, 144, 0.2);
@@ -98,10 +113,17 @@ strong {
   .lead_text {
     font-size: 1.3rem;
     text-shadow: 0px 1px 3px #000000cc;
+    @include media-breakpoint-down(md) {
+      font-size: 1.1rem;
+    }
   }
   .main-title {
     text-shadow: 0px 1px 3px #000000cc;
     margin-top: 40px;
+    @include media-breakpoint-down(md) {
+      font-size: 1.9rem;
+      line-height: 1;
+    }
   }
 }
 
@@ -473,28 +495,36 @@ section {
   .main-timeline9:before {
     left: 100%;
   }
+  .main-timeline9 .content {
+    padding-right: 95px;
+  }
   .main-timeline9 .timeline {
     width: 100%;
     float: none;
-    margin-bottom: 20px !important;
+    margin-bottom: 0px !important;
   }
+
   .main-timeline9 .timeline:first-child:before,
   .main-timeline9 .timeline:last-child:before {
     left: auto !important;
     right: -13px !important;
   }
-  .main-timeline9 .timeline:nth-child(2n) .circle {
+  .main-timeline9 .timeline:nth-child(2n) .circle,
+  .main-timeline9 .timeline:nth-child(2n) .timeline-content {
     float: left;
+  }
+  .main-timeline9 .timeline:nth-child(2n) .circle {
     margin: 40px 25px 0 0;
   }
+
   .main-timeline9 .timeline:nth-child(2n) .circle:before {
-    right: -33px;
+    right: -25px;
     left: auto;
     box-shadow: 7px 0 9px -7px #444 inset;
   }
   .main-timeline9 .timeline:nth-child(2n) .circle span:after,
   .main-timeline9 .timeline:nth-child(2n) .circle span:before {
-    right: -33px;
+    right: -25px;
     left: auto;
     border-radius: 0 0 0 21px;
   }
