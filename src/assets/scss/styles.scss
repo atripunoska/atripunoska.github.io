@@ -27,6 +27,9 @@ $dark: #3d3d3d;
 body {
   font-family: "Encode Sans Condensed", sans-serif;
 }
+strong {
+  font-weight: 700;
+}
 .navbar-light {
   .navbar-nav {
     .nav-link {
@@ -58,13 +61,19 @@ body {
 .weight300 {
   font-weight: 300;
 }
+.weight400 {
+  font-weight: 400;
+}
+
 .btn {
   border-radius: 0;
 }
+
 .btn-primary:hover {
   background: #fff;
   color: #000;
 }
+
 #intro {
   background-image: url(../images/intro-bg.jpg);
   background-size: cover;
@@ -83,6 +92,10 @@ body {
   }
   .lead_text {
     font-size: 1.3rem;
+    text-shadow: 0px 1px 3px #000000cc;
+  }
+  .main-title {
+    text-shadow: 0px 1px 3px #000000cc;
   }
 }
 
@@ -104,6 +117,43 @@ body {
   background-color: darken($color: #000000, $amount: 0);
   color: #fff;
   padding: 50px 0;
+  .date {
+    display: inline-block;
+    min-width: 135px;
+    background: #fff;
+    color: #000;
+    padding: 10px 18px;
+    font-size: 18px;
+    margin-bottom: 15px;
+    text-align: center;
+    font-weight: 500;
+  }
+  .description {
+    position: relative;
+    padding-left: 30px;
+    margin-bottom: 20px;
+    font-size: 18px;
+    &::before {
+      content: "";
+      width: 20px;
+      height: 20px;
+      background: #fff;
+      position: absolute;
+      top: 3px;
+      left: 0;
+      border-radius: 50%;
+    }
+    &::after {
+      content: "";
+      width: 14px;
+      height: 14px;
+      background: #000;
+      position: absolute;
+      top: 6px;
+      left: 3px;
+      border-radius: 50%;
+    }
+  }
 }
 
 #contact {
