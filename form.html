@@ -1,0 +1,98 @@
+<div class="row">
+    <div class="col-xs-12 col-sm-6 col-md-12 col-lg-6">
+      <h3>Please fill up the form and we’ll be in touch soon.</h3>
+      <div>
+        <h3>Select event</h3>
+        [post_select post_select-525 posts-number:-1 class:form-control
+        class:input-lg class:margin-bottom-30 publish include_blank
+        post-type:event tax-relation:OR value-field:title orderby:title order:DESC
+        "%title%"]
+      </div>
+      <div class="card radio-btn-wrapper">
+        <h4 class="margin-top-0">Do you want to have a booth at the event?</h4>
+        [radio radio-booth use_label_element "Yes" "No"]
+      </div>
+      <div class="card radio-btn-wrapper">
+        <h4 class="margin-top-0">Do you want/need a consultancy call?</h4>
+        [radio radio-call use_label_element "Yes" "No"]
+      </div>
+      <div class="card radio-btn-wrapper">
+        <h4 class="margin-top-0">
+          Would you like to have a speaking slot at the event?
+        </h4>
+        [radio radio-slot use_label_element "Yes" "No"]
+      </div>
+      <div class="card radio-btn-wrapper">
+        <h4 class="margin-top-0">
+          Would you like to be able to upload downloadable content on the NCT
+          CBRNe App?
+        </h4>
+        [radio radio-dl use_label_element "Yes" "No"]
+      </div>
+      <div class="card radio-btn-wrapper">
+        <h4 class="margin-top-0">
+          Would you like to have your product used in the NCT Pro Trainings?
+        </h4>
+        [radio radio-product use_label_element "Yes" "No"]
+      </div>
+    </div>
+  
+    <div class="col-xs-12 col-sm-6 col-md-12 col-lg-6">
+      [group group-diamond]
+      <p>
+        <h4 class="weight500">You qualify for one of the following packages:</h4>
+        <ul class="list-inline">
+            <li><div class="diamond">Diamond <img src="https://nct-events.com/wp-content/themes/nct_main/images/icons8-diamond.png" alt=""></div></li>
+            <li><div class="platinum">Platinum  <img src="https://nct-events.com/wp-content/themes/nct_main/images/icons8-bookmark-64.png" alt=""></div></li>
+            <li><div class="gold">Gold <img src="https://nct-events.com/wp-content/themes/nct_main/images/icons8-gold-bars-50.png" alt=""></div></li>
+        </ul> 
+      </p>
+      [/group] 
+      [group group-silver]
+      <p>
+        <h4 class="weight500">You qualify for the following package:</h4>  
+        <div class="silver package">Silver</div></p>
+      [/group] [group group-bronze]
+      <p>
+        <h4 class="weight500">You qualify for one of the following packages:</h4>
+        <div class="bronze-meeting package">Bronze <span>meeting</span></div>
+        <div class="exibitor package">Exibitor</div>
+      </p>
+      [/group] 
+      [group group-bronze-speaking]
+      <p>
+        <h4 class="weight500">You qualify for the following package:</h4>  
+        <div class="bronze-speaking package">Bronze <span>speaking</span></div>
+      </p>
+      [/group] [group group-bronze-pro]
+      <p>
+        <h4 class="weight500">You qualify for one of the following packages:</h4>
+        <div class="pro-bronze package">Bronze <br>PRO</div>
+        <div class="pro-training package">Training<br/>PRO</div>
+      </p>
+      [/group] [group group-sponsor]
+      <p>
+        <h4 class="weight500">You qualify for the following package:</h4>  
+        <div class="sponsor-app package">Sponsor<br/>APP</div>
+      </p>
+      [/group]
+      <div></div>
+      [text* first-name class:form-control class:input-lg class:margin-bottom-30
+      placeholder "First name*"] [text* last-name class:form-control
+      class:input-lg class:margin-bottom-30 placeholder "Last name*"] [email*
+      email class:form-control class:input-lg class:margin-bottom-30 placeholder
+      "Email*"] [text phone class:form-control class:input-lg
+      class:margin-bottom-30 placeholder "Phone"] [text* company
+      class:form-control class:input-lg class:margin-bottom-30 placeholder
+      "Company/Organization*"]
+      <p class="small margin-top-30 text-right-mobile-left">
+        <span class="weight400 color-yellow">*</span> These fields are required.
+      </p>
+    </div>
+  
+    <div class="col-xs-12 col-sm-5">
+      [submit class:btn class:btn-primary class:btn-xl "Submit"]
+    </div>
+  
+    <div class="col-xs-12 col-sm-7"></div>
+  </div>

@@ -27,10 +27,30 @@ $dark: #3d3d3d;
 body {
   font-family: "Encode Sans Condensed", sans-serif;
 }
+
+.weight300 {
+  font-weight: 300;
+}
 #intro {
+  background-image: url(../images/technology-1283624_1920.jpg);
+  background-size: cover;
+  position: relative;
   min-height: 100vh;
   padding: 100px 0 50px 0;
+  color: #fff;
+  .overlay {
+    background: rgba(88, 88, 88, 0.88);
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+  }
+  .lead_text {
+    font-size: 1.3rem;
+  }
 }
+
 #skills {
   background-color: darken($color: #000000, $amount: 0);
   color: #fff;
@@ -176,13 +196,14 @@ section {
   z-index: -1;
 }
 .main-timeline9 .circle {
-  width: 180px;
-  height: 180px;
+  width: 125px;
+  height: 125px;
   border-radius: 50%;
   background: #fff;
   border: 8px solid #c7c7c7;
   float: left;
   margin-right: 25px;
+  margin-top: 28px;
   position: relative;
 }
 .main-timeline9 .circle span:after,
@@ -207,9 +228,9 @@ section {
   width: 100%;
   height: 100%;
   border-radius: 50%;
-  line-height: 160px;
+  line-height: 105px;
   border: 3px solid #adabab;
-  font-size: 80px;
+  font-size: 50px;
   color: #454344;
 }
 .main-timeline9 .circle span:after,
@@ -231,11 +252,11 @@ section {
   position: relative;
 }
 .main-timeline9 .year {
-  display: block;
-  padding: 10px;
-  margin: 10px 0 50px;
+  display: inline-block;
+  padding: 10px 25px;
+  margin: 30px 0 25px;
   background: #000;
-  font-size: 25px;
+  font-size: 18px;
   color: #fff;
 }
 .main-timeline9 .title {
@@ -297,7 +318,7 @@ section {
   float: right;
 }
 .main-timeline9 .timeline:nth-child(2n) .circle {
-  margin: 0 0 0 25px;
+  margin: 27px 0 0 80px;
 }
 .main-timeline9 .timeline:nth-child(2n) .circle:before {
   right: auto;

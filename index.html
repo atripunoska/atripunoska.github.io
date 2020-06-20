@@ -1,16 +1,20 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-  <!-- Global site tag (gtag.js) - Google Analytics -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=UA-169999250-1"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script
+      async
+      src="https://www.googletagmanager.com/gtag/js?id=UA-169999250-1"
+    ></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag() {
+        dataLayer.push(arguments);
+      }
+      gtag("js", new Date());
 
-  gtag('config', 'UA-169999250-1');
-</script>
-
+      gtag("config", "UA-169999250-1");
+    </script>
 
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -20,15 +24,15 @@
     <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png" />
     <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png" />
     <link rel="manifest" href="/site.webmanifest" />
-    <script src="dist/js/all.js?cb=1592505028895" defer></script>
+    <script src="dist/js/all.js?cb=1592669023086" defer></script>
     <link
       rel="stylesheet"
-      href="dist/css/all.min.css?cb=1592505028895"
+      href="dist/css/all.min.css?cb=1592669023086"
       type="text/css"
     />
     <link
       rel="stylesheet"
-      href="dist/css/styles.css?cb=1592505028895"
+      href="dist/css/styles.css?cb=1592669023086"
       type="text/css"
     />
   </head>
@@ -53,18 +57,10 @@
             </div>
             <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
               <div class="navbar-nav">
-                <a class="nav-item nav-link active" href="#"
-                  >Home <span class="sr-only">(current)</span></a
-                >
-                <a class="nav-item nav-link" href="#">Features</a>
-                <a class="nav-item nav-link" href="#">Pricing</a>
-                <a
-                  class="nav-item nav-link disabled"
-                  href="#"
-                  tabindex="-1"
-                  aria-disabled="true"
-                  >Disabled</a
-                >
+                <a class="nav-item nav-link" href="#skills">My Skills</a>
+                <a class="nav-item nav-link" href="#experience">Experience</a>
+                <a class="nav-item nav-link" href="#education">Education</a>
+                <a class="nav-item nav-link" href="#contact">Contact</a>
               </div>
             </div>
           </div>
@@ -74,13 +70,14 @@
     </nav>
 
     <section id="intro">
+      <div class="overlay"></div>
       <div
         class="container h-100 d-flex align-items-center justify-content-center"
       >
-        <div class="row">
-          <div class="col-md-4 offset-md-4">
+        <div class="row justify-content-center">
+          <div class="col-md-3">
             <img
-              src="dist/images/profile.jpg"
+              src="dist/images/profile.png"
               alt="Ana Tripunoska"
               class="img-fluid mx-auto"
             />
@@ -88,16 +85,23 @@
           <div class="col-12 text-center">
             <h1 class="main-title text-center mb-5">
               Ana Tripunoska
-              <span class="d-block">- Frontend Developer -</span>
+              <span class="d-block mt-3 weight300">- Frontend Developer -</span>
             </h1>
-            <div class="lead_text text-dark text-center mb-5">
-              Passionate person, striving for continuous self-improvement and
-              making the internet a better (looking) place. <br />
-              Prime focus on converting data to graphical interface for users to
-              view and interact with that data, through digital interaction
-              using HTML, CSS and JavaScript.
+
+            <div class="row">
+              <div class="col-12 col-lg-10 offset-lg-1">
+                <div class="lead_text text-white text-center mb-5">
+                  Passionate person, striving for continuous self-improvement
+                  and making the internet a better (looking) place. <br />
+                  Prime focus on converting data to graphical interface for
+                  users to view and interact with that data, through digital
+                  interaction using HTML, CSS and JavaScript.
+                </div>
+                <a href="#" class="btn btn-primary btn-lg"
+                  >Download My Resume</a
+                >
+              </div>
             </div>
-            <a href="#" class="btn btn-primary btn-lg">Download My Resume</a>
           </div>
         </div>
       </div>
@@ -314,16 +318,66 @@
           <div class="col-12">
             <h2 class="text-center section-title">Education</h2>
           </div>
+          <div class="col-12">
+            <div class="date">
+              2018 - Present
+            </div>
+            <div class="description">
+              MASTER OF COMPUTER SCIENCE AND ENGINEERING <br> Faculty of Computer
+              Science and Engineering
+            </div>
+          </div>
+          <div class="col-12">
+            <div class="date">
+              2011 - 2017
+            </div>
+            <div class="description">
+              BACHELOR OF COMPUTER SCIENCE AND ENGINEERING <br> Faculty of Computer
+              Science and Engineering
+            </div>
+          </div>
         </div>
       </div>
     </section>
     <!-- /#education-->
     <section id="contact">
-      <div class="container">
+      <div class="container-fluid">
         <div class="row">
           <div class="col-12">
-            <h2 class="text-center section-title">Contact Me</h2>
+            <h2 class="text-center section-title">Let's get in touch</h2>
           </div>
+        </div>
+        <!--row-->
+        <div class="row">
+          <div class="col-12 col-lg-4">
+            <div class="embed-responsive embed-responsive-16by9">
+              <iframe
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d189763.78858865693!2d21.284806424959342!3d41.99900509569202!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x135415a58c9aa2a5%3A0xb2ed88c260872020!2sSkopje!5e0!3m2!1sen!2smk!4v1592667833522!5m2!1sen!2smk"
+                class="embed-responsive-item"
+                frameborder="0"
+                style="border: 0;"
+                allowfullscreen=""
+                aria-hidden="false"
+                tabindex="0"
+              ></iframe>
+            </div>
+          </div>
+          <div class="col-12 col-lg-4">
+            <h3>Contact Me</h3>
+            <div class="mail">
+              <i class="fal fa-envelope"></i>
+              <a href="mailto:atripunoska@gmail.com">atripunoska@gmail.com</a>
+            </div>
+            <div class="skype">
+              <i class="fab fa-skype"></i>  ana_tripunoska
+          </div>
+          <div class="location">
+            <i class="fal fa-map-marker-alt"></i>
+             St. Aco Shopov no. 16, 1000 Skopje, Macedonia
+          </div>
+        </div>
+        <div class="col-12 col-lg-4">
+          <h3>Find Me Elsewhere</h3>
         </div>
       </div>
     </section>
