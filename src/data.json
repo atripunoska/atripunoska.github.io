@@ -1,0 +1,131 @@
+{
+  "name": "Ana Tripunoska",
+  "role": "Frontend Engineer",
+  "description": "Passionate person, striving for continuous self-improvement and making the internet a better (looking) place. Prime focus on converting data to graphical interface for users to view and interact with that data, through digital interaction using HTML, CSS and JavaScript.",
+  "skills": {
+    "technical": [
+      "HTML5",
+      "CSS3",
+      "Javascript",
+      "jQuery",
+      "React",
+      "SASS/SCCS",
+      "Bootstrap",
+      "Tailwind",
+      "Wordpress",
+      "WooCommerce",
+      "PHP",
+      "Git",
+      "Photoshop",
+      "Figma",
+      "SEO",
+      "Web Accessibility"
+    ],
+    "personal": [
+      "Team Work",
+      "Work Ethic",
+      "Communication",
+      "Listening",
+      "Adaptability",
+      "Problem Solving",
+      "Time Management"
+    ]
+  },
+  "experience": [
+    {
+      "company": "Valtech",
+      "company_url": "https://www.valtech.com",
+      "role": "Frontend Engineer",
+      "date": "Jan 2022 - Present",
+      "bullet_points": [
+        "Implementing user interface components for web site solutions built with Adobe Experience Manager",
+        "Interpreting designs and translating them into pixel-perfect HTML/SCSS/JSX output to create engaging, modern web experiences.",
+        "Ensuring high-performance and compatibility across mobile and desktop browsers using responsive design",
+        "Developing and testing user-facing features that leverage Vanilla JS, React, TypeScript",
+        "Performing bug fixes and code reviews",
+        "Working with experience designers and developers through the stages of design, development, QA, launch, and maintenance."
+      ],
+      "skills": [
+        "React",
+        "Adobe Experience Manager (AEM)",
+        "TypeScript",
+        "Storybook",
+        "SCSS",
+        "Git",
+        "Jira",
+        "Confluence",
+        "Remote Teamwork"
+      ]
+    },
+    {
+      "company": "IWM Network",
+      "company_url": "https://iwmnetwork.com/",
+      "role": "Frontend Developer",
+      "date": "Mar 2016 - Jan 2022",
+      "bullet_points": [
+        "Creating, maintaining and improving websites",
+        "Collaborating with back-end developers and web designers to improve usability",
+        "Building customized features for clients",
+        "Converting PSD files to HTML",
+        "Developing custom WordPress Themes",
+        "Developing custom Liferay Themes",
+        "Developing e-commerce websites using WooCommerce",
+        "Implementing On-Page SEO",
+        "Optimizing sites to improve performance and efficiency"
+      ],
+      "skills": [
+        "HTML5",
+        "JavaScript",
+        "WordPress",
+        "WooCommerce",
+        "Liferay",
+        "Material-UI",
+        "CSS3",
+        "Git"
+      ]
+    },
+    {
+      "company": "iBorn.net",
+      "company_url": "https://iborn.net/",
+      "role": "Intern",
+      "date": "Aug 2015 - Sep 2015",
+      "bullet_points": [
+        "Maintaining Web Applications",
+        "Designing mobile based features",
+        "Writing functional required documents and guides"
+      ],
+      "skills": ["CSS3", "Version Control", "Responsive design"]
+    },
+    {
+      "company": "Duna Computers",
+      "company_url": "https://duna.mk/",
+      "role": "Intern",
+      "date": "Sep 2014 - May 2015",
+      "bullet_points": [
+        "Maintaining Web Applications",
+        "Creating Web Applications with Bootstrap",
+        "Creating CSS files for websites and assist web developers in effective implementation",
+        "Testing websites and reporting bugs"
+      ],
+      "skills": ["HTML", "CSS", "Bootstrap"]
+    },
+    {
+      "company": "Komercijalna Banka AD",
+      "company_url": "https://kb.com.mk/",
+      "role": "Intern",
+      "date": "Jan 2013 - Feb 2013",
+      "bullet_points": [
+        "Working with databases",
+        "Writing SQL queries to insert, modify and delete data in database"
+      ],
+      "skills": ["SQL"]
+    }
+  ],
+  "contact": {
+    "email": "atripunoska@gmail.com",
+    "socials": {
+      "linkedin": "https://www.linkedin.com/in/ana-tripunoska",
+      "github": "https://github.com/atripunoska"
+    }
+  }
+}
