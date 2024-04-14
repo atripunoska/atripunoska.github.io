@@ -41,7 +41,7 @@ const Experience = ({ experience }) => {
       </motion.div>
 
       <motion.div
-        className="mt-48 flex md:w-4/5 mx-auto gap-3 items-start"
+        className="mt-48 flex md:w-4/5 mx-auto gap-3 items-start min-h-max"
         initial="hidden"
         whileInView="visible"
         viewport={{ once: true, amount: 0.5 }}
@@ -51,14 +51,18 @@ const Experience = ({ experience }) => {
           visible: { opacity: 1, x: 0 },
         }}
       >
-        <TETabs vertical>
+        <TETabs vertical pills={false}>
           {experience.map((item) => {
             return (
               <TETabsItem
                 key={item.company}
                 onClick={() => handleVerticalClick(item.company)}
                 active={verticalActive === item.company}
-                className="text-left !px-0"
+                className={`dark:hover:!bg-white dark:hover:!text-black text-left !px-2 !border-b-0 border-l-2 !my-0  !border-gray-200 hover:!border-transparent hover:!bg-deep-blue hover:!text-white ${
+                  verticalActive === item.company
+                    ? "dark:!border-white !border-black dark:!text-light-green"
+                    : "dark:!border-gray-800"
+                } `}
               >
                 {item.company}
               </TETabsItem>
@@ -84,17 +88,15 @@ const Experience = ({ experience }) => {
                   {item.bullet_points.map((bullet) => {
                     return (
                       <li
-                        className="flex items-center gap-2 mb-1"
+                        className="flex items-center gap-2 mb-2"
                         key={Math.random()}
                       >
                         <svg
                           xmlns="http://www.w3.org/2000/svg"
-                          //  xmlns:xlink="http://www.w3.org/1999/xlink"
                           version="1.1"
                           width="8"
                           height="8"
                           viewBox="0 0 256 256"
-                          //  xml:space="preserve"
                         >
                           <defs></defs>
                           <g
@@ -105,7 +107,7 @@ const Experience = ({ experience }) => {
                               strokeLinecap: "butt",
                               strokeLinejoin: "miter",
                               strokeMiterlimit: "10",
-                              fill: "#fff",
+
                               fillRule: "nonzero",
                               opacity: "1",
                             }}
@@ -113,6 +115,7 @@ const Experience = ({ experience }) => {
                           >
                             <path
                               d="M 0 90 V 0 l 90 45 L 0 90 z"
+                              className="fill-black	dark:fill-white"
                               style={{
                                 stroke: "none",
                                 strokeWidth: "1",
@@ -120,7 +123,7 @@ const Experience = ({ experience }) => {
                                 strokeLinecap: "butt",
                                 strokeLinejoin: "miter",
                                 strokeMiterlimit: "10",
-                                fill: "#fff",
+
                                 fillRule: "nonzero",
                                 opacity: "1",
                               }}
@@ -139,7 +142,7 @@ const Experience = ({ experience }) => {
                   {item.skills.map((skill) => {
                     return (
                       <li
-                        className="p-2 bg-slate-600 rounded-sm text-xs font-mono"
+                        className="p-2 text-xs font-mono dark:text-light-green dark:bg-transparent"
                         key={skill}
                       >
                         {skill}
