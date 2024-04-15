@@ -4,7 +4,7 @@ import { motion } from "framer-motion";
 import AnchorLink from "react-anchor-link-smooth-scroll";
 import SocialMediaIcons from "../components/SocialMediaIcons";
 
-const Landing = ({ setSelectedPage }) => {
+const Landing = ({ setSelectedPage, name, desc, role }) => {
   const isAboveMediumScreens = useMediaQuery("(min-width:1060px)");
   return (
     <section
@@ -14,19 +14,19 @@ const Landing = ({ setSelectedPage }) => {
       {/**  IMAGE SECTION **/}
       <div className="md:order-2 flex justify-center basis-3/5 z-10 mt-16 md:mt-32">
         {isAboveMediumScreens ? (
-          <div className="relative z-0 ml-20 before:absolute before:-top-20 before:-left-20 before:rounded-t-[400px] before:w-full before:max-w-[400px] before:h-full before:border-2 before:border-blue before:z-[-1]">
+          <div className="relative z-0 ml-20 before:absolute before:-top-10 before:-left-10  before:w-full before:max-w-[500px] before:h-full before:border-2 before:border-deep-blue dark:before:border-white before:z-[-1]">
             <img
-              src="assets/profile-image.png"
+              src="assets/profile-image.jpg"
               alt="profile"
-              className="hover:filter hover:saturate-200 transition duration-500 z-10 w-full max-width-[400px] md:max-w-[600px]"
+              className="z-10 w-full max-width-[400px] md:max-w-[600px]"
             />
           </div>
         ) : (
           <div>
             <img
-              src="assets/profile-image.png"
+              src="assets/profile-image.jpg"
               alt="profile"
-              className="hover:filter hover:saturate-200 transition duration-500 z-10 w-full max-width-[400px] md:max-w-[600px]"
+              className="z-10 w-full max-width-[400px] md:max-w-[600px]"
             />
           </div>
         )}
@@ -43,22 +43,18 @@ const Landing = ({ setSelectedPage }) => {
             visible: { opacity: 1, x: 0 },
           }}
         >
-          <p className="text-6xl font-playfair z-10 text-center md:text-start">
-            Ana{" "}
-            <span className="xs:relative xs:text-deep-blue xs:font-semibold z-20 xs:before:content-brush before:absolute before:-left-[25px] before:-top-[70px] before:z-[-1]">
-              Tripunoska
-            </span>
-          </p>
-          <p className="mt-10 mb-7 text-sm text-center md:text-start">
-            Passionate person, striving for continuous self-improvement and
-            making the internet a better (looking) place. Prime focus on
-            converting data to graphical interface for users to view and
-            interact with that data, through digital interaction using HTML, CSS
-            and JavaScript.
+          <h1 className="text-6xl font-playfair z-10 text-center md:text-start text-deep-blue dark:text-white">
+            {name}
+          </h1>
+          <h2 className="text-3xl text-center md:text-start font-mono mt-4 text-deep-blue dark:text-white">
+            {role}
+          </h2>
+          <p className="mt-10 mb-7 text-lg text-center md:text-start text-deep-blue dark:text-white">
+            {desc}
           </p>
         </motion.div>
         <motion.div
-          className="flex mt-5 justify-center md:justify-start"
+          className="flex mt-5 justify-center md:justify-start gap-2"
           initial="hidden"
           whileInView="visible"
           viewport={{ once: true, amount: 0.5 }}
@@ -69,21 +65,21 @@ const Landing = ({ setSelectedPage }) => {
           }}
         >
           <AnchorLink
-            className="bg-gradient-rainblue text-deep-blue rounded-sm py-3 px-7 font-semibold hover:bg-blue hover:text-white transition duration-500"
+            className="bg-white text-deep-blue dark:bg-deep-blue dark:text-white border-deep-blue dark:border-white dark:hover:bg-white dark:hover:text-deep-blue border-2 rounded-sm py-3 px-7 font-semibold hover:bg-deep-blue hover:text-white transition duration-500 font-playfair font-light"
             onClick={() => setSelectedPage("contact")}
             href="#contact"
           >
             Contact Me
           </AnchorLink>
-          <AnchorLink
-            className="rounded-r-sm bg-gradient-rainblue py-0.5 pr-0.5"
-            onClick={() => setSelectedPage("contact")}
-            href="#contact"
+
+          <a
+            href="assets/Ana_Tripunoska_Zdravkovikj.pdf"
+            title="Resume"
+            target="_blank"
+            className="bg-deep-blue border-2 border-deep-blue text-white dark:bg-white dark:text-deep-blue dark:hover:bg-dark-blue dark:hover:text-white dark:border-white hover:bg-white hover:text-deep-blue hover:dark:bg-deep-blue transition duration-500 py-3 px-7 flex items-center justify-center font-playfair px-10"
           >
-            <div className="bg-deep-blue hover:text-red transition duration-500 w-full h-full flex items-center justify-center font-playfair px-10">
-              Let's talk.
-            </div>
-          </AnchorLink>
+            Resume
+          </a>
         </motion.div>
         <motion.div
           className="flex mt-5 justify-center md:justify-start"
