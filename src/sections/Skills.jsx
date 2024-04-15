@@ -21,10 +21,10 @@ const Skills = ({ technical, personal }) => {
             MY SKILLS
           </h2>
         </motion.div>
-        <div className="flex gap-24 mt-20">
-          <div className="w-2/3">
+        <div className="md:flex gap-24 mt-20">
+          <div className="w-full md:w-2/3">
             <div className="text-2xl mb-6 font-semibold ">Technical skills</div>
-            <ul className="grid grid-cols-4 gap-4 ">
+            <ul className="grid grid-cols-2 md:grid-cols-4 gap-4 ">
               {technical.map((skill) => {
                 return (
                   <li
@@ -57,6 +57,7 @@ const Skills = ({ technical, personal }) => {
                       >
                         <path
                           d="M 0 90 V 0 l 90 45 L 0 90 z"
+                          className="fill-black	dark:fill-white"
                           style={{
                             stroke: "none",
                             strokeWidth: "1",
@@ -64,7 +65,7 @@ const Skills = ({ technical, personal }) => {
                             strokeLinecap: "butt",
                             strokeLinejoin: "miter",
                             strokeMiterlimit: "10",
-                            fill: "#fff",
+
                             fillRule: "nonzero",
                             opacity: "1",
                           }}
@@ -80,7 +81,9 @@ const Skills = ({ technical, personal }) => {
             </ul>
           </div>
           <div>
-            <div className="text-2xl mb-6 font-semibold">Soft skills</div>
+            <div className="text-2xl mb-6 font-semibold mt-20 md:mt-0">
+              Soft skills
+            </div>
             <ul>
               {personal.map((skill) => {
                 return (

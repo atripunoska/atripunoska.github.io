@@ -16,11 +16,11 @@ const projectVariant = {
 };
 
 const Project = ({ title, description, image, liveUrl, github, techStack }) => {
-  const overlayStyles = `absolute h-full w-full opacity-0 hover:opacity-90 transition duration-500
+  const overlayStyles = `absolute h-full w-full opacity-90 md:opacity-0 hover:opacity-90 transition duration-500
     bg-grey z-30 flex flex-col justify-center items-center text-center p-16 text-deep-blue`;
 
   return (
-    <motion.div variants={projectVariant} className="relative">
+    <motion.div variants={projectVariant} className="relative mb-1 md:mb-0">
       <div className={overlayStyles}>
         <p className="text-2xl font-playfair">{title}</p>
         <p className="mt-7">{description}</p>
@@ -40,6 +40,7 @@ const Project = ({ title, description, image, liveUrl, github, techStack }) => {
             target="_blank"
             title="Project URL"
             rel="noreferrer"
+            className="hover:opacity-50 transition duration-500"
           >
             <svg
               fill="#000000"
@@ -63,7 +64,13 @@ const Project = ({ title, description, image, liveUrl, github, techStack }) => {
               </g>
             </svg>
           </a>
-          <a href={github} target="_blank" title="Github URL" rel="noreferrer">
+          <a
+            href={github}
+            target="_blank"
+            title="Github URL"
+            rel="noreferrer"
+            className="hover:opacity-50 transition duration-500"
+          >
             <svg
               xmlns="http://www.w3.org/2000/svg"
               viewBox="0 0 24 24"
@@ -109,7 +116,7 @@ const Projects = ({ projects }) => {
             <LineGradient width="w-2/3" />
           </div>
         </div>
-        <p className="mt-10 mb-10">Some projects I've worked on.</p>
+        <p className="mt-10 mb-10">Here are some projects I've worked on.</p>
       </motion.div>
 
       {/* PROJECTS */}
