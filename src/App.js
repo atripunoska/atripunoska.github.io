@@ -6,6 +6,7 @@ import Skills from "./sections/Skills";
 import Projects from "./sections/Projects";
 import Experience from "./sections/Experience";
 import Contact from "./sections/Contact";
+import Footer from "./components/Footer";
 
 function App() {
   const divRef = useRef();
@@ -64,9 +65,7 @@ function App() {
   }
   return (
     <div
-      className={`app relative ${
-        isDarkMode ? "dark" : ""
-      } [scrollbar-width:none] [&::-webkit-scrollbar]:hidden overflow-x-auto`}
+      className={`app relative ${isDarkMode ? "dark" : ""}`}
       ref={divRef}
       onMouseMove={handleMouseMove}
       onFocus={handleFocus}
@@ -76,7 +75,7 @@ function App() {
     >
       <div className="dark:bg-deep-blue bg-white">
         <div
-          className="pointer-events-none absolute -inset-px opacity-0 transition duration-300 overflow-x-hidden"
+          className="pointer-events-none absolute inset-0 z-40 opacity-0 transition duration-300 overflow-x-hidden"
           style={{
             opacity,
             background: `radial-gradient(600px circle at ${position.x}px ${position.y}px, rgba(255,255,255,.06), transparent 40%)`,
@@ -117,6 +116,7 @@ function App() {
           <Contact />
         </div>
       </div>
+      <Footer />
     </div>
   );
 }
