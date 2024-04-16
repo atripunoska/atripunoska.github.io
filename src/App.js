@@ -7,6 +7,8 @@ import Projects from "./sections/Projects";
 import Experience from "./sections/Experience";
 import Contact from "./sections/Contact";
 import Footer from "./components/Footer";
+import ReactGA from "react-ga4";
+ReactGA.initialize("G-W7Y6FG7HDE");
 
 function App() {
   const divRef = useRef();
@@ -63,6 +65,11 @@ function App() {
   function handleDarkMode() {
     setIsDarkMode(!isDarkMode);
   }
+
+  useEffect(() => {
+    ReactGA.send({ hitType: "pageview", page: window.location.pathname });
+  }, []);
+
   return (
     <div
       className={`app relative ${isDarkMode ? "dark" : ""}`}
