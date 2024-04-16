@@ -32,7 +32,7 @@ const Navbar = ({
 
   const navbarBackground = isTopOfPage
     ? ""
-    : "bg-white dark:bg-deep-blue/80 md:drop-shadow-md  dark:backdrop-blur-md";
+    : "bg-white dark:bg-deep-blue/80 md:drop-shadow-md  md:dark:backdrop-blur-md";
   return (
     <nav className={`${navbarBackground} z-40 w-full fixed top-0 py-4 isolate`}>
       <div className="flex items-center justify-between mx-auto w-5/6">
@@ -69,7 +69,7 @@ const Navbar = ({
             />
             <button
               onClick={handleDarkMode}
-              className="h-12 w-12 rounded-lg p-2 dark:bg-gray-800 bg-gray-200 hover:bg-gray-100 dark:hover:bg-gray-700 z-50 relative"
+              className="h-10 w-10 rounded-lg p-2 z-50 relative"
             >
               {!isDarkMode ? (
                 <svg fill="gray-400" viewBox="0 0 20 20">
@@ -90,7 +90,7 @@ const Navbar = ({
           <div>
             <button
               onClick={handleDarkMode}
-              className="h-12 w-12 rounded-lg p-2 dark:bg-gray-800 bg-gray-200 hover:bg-gray-100 dark:hover:bg-gray-700 z-50 relative"
+              className="h-10 w-10 p-2 z-50 relative"
             >
               {!isDarkMode ? (
                 <svg fill="gray-400" viewBox="0 0 20 20">
@@ -107,7 +107,7 @@ const Navbar = ({
               )}
             </button>
             <button
-              className="rounded-full dark:bg-white bg-deep-blue p-2"
+              className="p-2"
               onClick={() => setIsMenuToggled(!isMenuToggled)}
             >
               <svg
@@ -120,7 +120,7 @@ const Navbar = ({
                   fillRule="evenodd"
                   clipRule="evenodd"
                   d="M3 8V6H21V8H3ZM3 13H21V11H3V13ZM3 18H21V16H3V18Z"
-                  className="fill-white dark:fill-black"
+                  className="fill-black dark:fill-white"
                 />
               </svg>
             </button>
@@ -129,7 +129,10 @@ const Navbar = ({
         {!isAboveSmallScreens && isMenuToggled && (
           <div className="fixed right-0 bottom-0 h-full dark:bg-deep-blue bg-white w-[300px]">
             <div className="flex justify-end p-12 ">
-              <button onClick={() => setIsMenuToggled(!isMenuToggled)}>
+              <button
+                onClick={() => setIsMenuToggled(!isMenuToggled)}
+                className="absolute top-6 right-8"
+              >
                 <svg
                   width="24"
                   height="24"
@@ -140,7 +143,6 @@ const Navbar = ({
                   <path
                     d="M19 6.41L17.59 5L12 10.59L6.41 5L5 6.41L10.59 12L5 17.59L6.41 19L12 13.41L17.59 19L19 17.59L13.41 12L19 6.41Z"
                     className="fill-black dark:fill-white"
-                    fill-opacity="0.54"
                   />
                 </svg>
               </button>
