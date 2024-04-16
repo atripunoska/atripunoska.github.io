@@ -1,8 +1,6 @@
 import { useState, useEffect, useRef } from "react";
 import data from "./data.json";
-import useMediaQuery from "./hooks/useMediaQuery";
 import Navbar from "./sections/Navbar";
-import DotGroup from "./sections/DotGroup";
 import Landing from "./sections/Landing";
 import Skills from "./sections/Skills";
 import Projects from "./sections/Projects";
@@ -15,7 +13,6 @@ function App() {
   const [position, setPosition] = useState({ x: 0, y: 0 });
   const [opacity, setOpacity] = useState(0);
   const [selectedPage, setSelectedPage] = useState("home");
-  const isAboveMediumScreens = useMediaQuery("(min-width: 1060px)");
   const [isTopOfPage, setIsTopOfPage] = useState(true);
   const [isDarkMode, setIsDarkMode] = useState(false);
 
@@ -64,11 +61,12 @@ function App() {
 
   function handleDarkMode() {
     setIsDarkMode(!isDarkMode);
-    console.log(isDarkMode);
   }
   return (
     <div
-      className={`app relative ${isDarkMode ? "dark" : ""}`}
+      className={`app relative ${
+        isDarkMode ? "dark" : ""
+      } [scrollbar-width:none] [&::-webkit-scrollbar]:hidden overflow-x-auto`}
       ref={divRef}
       onMouseMove={handleMouseMove}
       onFocus={handleFocus}
@@ -78,7 +76,7 @@ function App() {
     >
       <div className="dark:bg-deep-blue bg-white">
         <div
-          className="pointer-events-none absolute -inset-px opacity-0 transition duration-300"
+          className="pointer-events-none absolute -inset-px opacity-0 transition duration-300 overflow-x-hidden"
           style={{
             opacity,
             background: `radial-gradient(600px circle at ${position.x}px ${position.y}px, rgba(255,255,255,.06), transparent 40%)`,
@@ -93,12 +91,6 @@ function App() {
         />
 
         <div className="w-5/6 mx-auto md:h-full">
-          {isAboveMediumScreens && (
-            <DotGroup
-              selectedPage={selectedPage}
-              setSelectedPage={setSelectedPage}
-            />
-          )}
           <Landing
             setSelectedPage={setSelectedPage}
             name={data.name}
@@ -115,7 +107,7 @@ function App() {
         </div>
 
         <div className="w-5/6 mx-auto ">
-          <Projects />
+          <Projects projects={data.projects} />
         </div>
 
         <div className="w-5/6 mx-auto ">
