@@ -34,8 +34,9 @@ module.exports = {
       },
       fontFamily: {
         playfair: ["Playfair Display", "serif"],
-        opensans: ["Open Sans", "sans-serif"],
+        //  opensans: ["Open Sans", "sans-serif"],
         mono: ["PT Mono", "monospace"],
+        inter: ["Inter", "sans-serif"],
       },
     },
     screens: {

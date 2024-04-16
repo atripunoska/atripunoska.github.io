@@ -21,7 +21,7 @@ const Contact = () => {
         <h3 className="font-playfair font-semibold text-4xl text-center mb-12">
           GET IN TOUCH
         </h3>
-        <p className="text-xl mb-12 font-light text-deep-blue dark:text-white mx-auto text-center md:w-2/3">
+        <p className="text-xl mb-12 font-light font-inter  text-deep-blue dark:text-white mx-auto text-center md:w-2/3">
           Have a question or project? <br />
           I'm keen to explore additional opportunities that spark creativity and
           challenge.
