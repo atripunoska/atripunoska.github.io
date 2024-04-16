@@ -29,6 +29,8 @@ module.exports = {
         "deep-blue": "#19180a",
         "dark-grey": "#757575",
         "opaque-black": "rgba(0,0,0,0.35)",
+        "light-green": "#C3FFB9",
+        "dark-purple": "#711772",
       },
       fontFamily: {
         playfair: ["Playfair Display", "serif"],
