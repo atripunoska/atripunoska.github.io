@@ -17,14 +17,14 @@ const projectVariant = {
 
 const Project = ({ title, description, image, liveUrl, github, techStack }) => {
   const overlayStyles = `absolute h-full w-full opacity-90 md:opacity-0 hover:opacity-90 transition duration-500
-    bg-grey z-30 flex flex-col justify-center items-center text-center p-16 text-deep-blue`;
+    bg-grey z-30 flex flex-col justify-center items-center text-center p-10 md:p-16 text-deep-blue`;
 
   return (
     <motion.div variants={projectVariant} className="relative mb-1 md:mb-0">
       <div className={overlayStyles}>
-        <p className="text-2xl font-playfair">{title}</p>
-        <p className="mt-7">{description}</p>
-        <div className="text-center text-sm mt-4">Build with:</div>
+        <p className="text-lg md:text-2xl font-playfair">{title}</p>
+        <p className="mt-7 text-xs md:text-md">{description}</p>
+        <div className="text-center text-xs md:text-sm mt-4">Build with:</div>
         <ul className="flex gap-3">
           {techStack.map((tech) => {
             return (
