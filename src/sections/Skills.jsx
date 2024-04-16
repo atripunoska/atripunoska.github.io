@@ -103,7 +103,7 @@ const Skills = ({ technical, personal }) => {
                         d="M1 5.917 5.724 10.5 15 1.5"
                       />
                     </svg>
-                    <span className="font-extralight">{skill}</span>
+                    <span className="font-extralight font-inter">{skill}</span>
                   </li>
                 );
               })}

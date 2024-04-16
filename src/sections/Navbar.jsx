@@ -10,7 +10,7 @@ const Link = ({ page, selectedPage, setSelectedPage }) => {
         selectedPage === lowerCasePage
           ? "text-dark-purple dark:text-light-green"
           : "text-dark-grey dark:text-white"
-      } hover:text-beige transition duration-500 font-mono font-light`}
+      } dark:hover:text-light-green hover:text-dark-purple transition duration-500 font-mono font-light`}
       href={`#${lowerCasePage}`}
       onClick={() => setSelectedPage(lowerCasePage)}
     >
@@ -36,9 +36,7 @@ const Navbar = ({
   return (
     <nav className={`${navbarBackground} z-40 w-full fixed top-0 py-4 isolate`}>
       <div className="flex items-center justify-between mx-auto w-5/6">
-        <h4 className="font-playfair text-3xl font-bold text-black dark:text-white">
-          A
-        </h4>
+        <img src="/assets/logo.png" alt="Logo" className="w-10 h-auto" />
 
         {isAboveSmallScreens ? (
           <div className="flex justify-between gap-16 font-opensans text-sm font-semibold items-center ">
@@ -70,6 +68,7 @@ const Navbar = ({
             <button
               onClick={handleDarkMode}
               className="h-10 w-10 rounded-lg p-2 z-50 relative"
+              aria-label="Toggle dark/light mode"
             >
               {!isDarkMode ? (
                 <svg fill="gray-400" viewBox="0 0 20 20">
@@ -91,6 +90,7 @@ const Navbar = ({
             <button
               onClick={handleDarkMode}
               className="h-10 w-10 p-2 z-50 relative"
+              aria-label="Toggle dark/light mode"
             >
               {!isDarkMode ? (
                 <svg fill="gray-400" viewBox="0 0 20 20">
@@ -106,10 +106,7 @@ const Navbar = ({
                 </svg>
               )}
             </button>
-            <button
-              className="p-2"
-              onClick={() => setIsMenuToggled(!isMenuToggled)}
-            >
+            <button className="p-2" aria-label="Menu open">
               <svg
                 width="24"
                 height="24"
@@ -132,6 +129,7 @@ const Navbar = ({
               <button
                 onClick={() => setIsMenuToggled(!isMenuToggled)}
                 className="absolute top-6 right-8"
+                aria-label="Close menu"
               >
                 <svg
                   width="24"

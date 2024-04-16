@@ -21,9 +21,9 @@ const Project = ({ title, description, image, liveUrl, github, techStack }) => {
 
   return (
     <motion.div variants={projectVariant} className="relative mb-1 md:mb-0">
-      <div className={overlayStyles}>
+      <div className={overlayStyles} role="button" tabIndex={0}>
         <p className="text-lg md:text-2xl font-playfair">{title}</p>
-        <p className="mt-7 text-xs md:text-md">{description}</p>
+        <p className="mt-7 text-xs md:text-sm">{description}</p>
         <div className="text-center text-xs md:text-sm mt-4">Build with:</div>
         <ul className="flex gap-3">
           {techStack.map((tech) => {

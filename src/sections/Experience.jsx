@@ -52,12 +52,17 @@ const Experience = ({ experience }) => {
         }}
       >
         <TETabs
-          pills={false}
-          className="flex-row overflow-x-scroll flex-nowrap md:overflow-x-auto md:flex-col border-b-2"
+          role="tablist"
+          aria-label="Work experience tabs"
+          className="flex-row overflow-x-scroll flex-nowrap md:overflow-x-auto md:flex-col border-b-2 md:border-b-0"
         >
           {experience.map((item) => {
             return (
               <TETabsItem
+                role="tab"
+                aria-selected={verticalActive === item.company}
+                tabIndex={verticalActive === item.company ? 0 : -1}
+                aria-controls={item.company}
                 key={item.company}
                 onClick={() => handleVerticalClick(item.company)}
                 active={verticalActive === item.company}
@@ -79,6 +84,9 @@ const Experience = ({ experience }) => {
               <TETabsPane
                 show={verticalActive === item.company}
                 key={item.company + item.date}
+                role="tabpanel"
+                tabIndex="0"
+                aria-labelledby={item.company}
               >
                 <div className="mb-2">
                   <span className="font-mono">{item.role}</span> @{" "}
