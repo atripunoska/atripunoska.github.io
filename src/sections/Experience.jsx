@@ -41,7 +41,7 @@ const Experience = ({ experience }) => {
       </motion.div>
 
       <motion.div
-        className="mt-48 flex md:w-4/5 mx-auto gap-3 items-start min-h-max"
+        className="mt-48 md:flex md:w-4/5 mx-auto gap-3 items-start min-h-max"
         initial="hidden"
         whileInView="visible"
         viewport={{ once: true, amount: 0.5 }}
@@ -51,14 +51,17 @@ const Experience = ({ experience }) => {
           visible: { opacity: 1, x: 0 },
         }}
       >
-        <TETabs vertical pills={false}>
+        <TETabs
+          pills={false}
+          className="flex-row overflow-x-scroll flex-nowrap md:overflow-x-auto md:flex-col border-b-2"
+        >
           {experience.map((item) => {
             return (
               <TETabsItem
                 key={item.company}
                 onClick={() => handleVerticalClick(item.company)}
                 active={verticalActive === item.company}
-                className={`dark:hover:!bg-white dark:hover:!text-black text-left !px-2 !border-b-0 border-l-2 !my-0  !border-gray-200 hover:!border-transparent hover:!bg-deep-blue hover:!text-white ${
+                className={`dark:hover:!bg-white dark:hover:!text-black text-left !px-2 !border-b-0 md:border-l-2 !my-0  !border-gray-200 hover:!border-transparent hover:!bg-deep-blue hover:!text-white  whitespace-nowrap ${
                   verticalActive === item.company
                     ? "dark:!border-white !border-black dark:!text-light-green"
                     : "dark:!border-gray-800"
@@ -81,7 +84,7 @@ const Experience = ({ experience }) => {
                   <span className="font-mono">{item.role}</span> @{" "}
                   <span className="font-bold">{item.company}</span>
                 </div>
-                <div className="font-light text-xs mb-5 font-mono">
+                <div className="font-inter text-xs mb-5 font-mono">
                   {item.date}
                 </div>
                 <ul className="text-sm">
@@ -133,7 +136,7 @@ const Experience = ({ experience }) => {
                           </g>
                         </svg>
 
-                        <span className="font-light">{bullet}</span>
+                        <span className="font-inter">{bullet}</span>
                       </li>
                     );
                   })}
@@ -142,7 +145,7 @@ const Experience = ({ experience }) => {
                   {item.skills.map((skill) => {
                     return (
                       <li
-                        className="p-2 text-xs font-mono dark:text-light-green dark:bg-transparent"
+                        className="p-2 text-xs font-mono text-dark-purple dark:text-light-green dark:bg-transparent"
                         key={skill}
                       >
                         {skill}
