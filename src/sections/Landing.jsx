@@ -43,10 +43,10 @@ const Landing = ({ setSelectedPage, name, desc, role }) => {
             visible: { opacity: 1, x: 0 },
           }}
         >
-          <h1 className="text-6xl font-playfair z-10 text-center md:text-start text-deep-blue dark:text-white">
+          <h1 className="text-4xl md:text-6xl font-playfair z-10 text-center md:text-start text-deep-blue dark:text-white">
             {name}
           </h1>
-          <h2 className="text-3xl text-center md:text-start font-mono mt-4 text-deep-blue dark:text-white">
+          <h2 className="text-2xl md:text-3xl text-center md:text-start font-mono mt-4 text-deep-blue dark:text-white">
             {role}
           </h2>
           <p className="mt-10 mb-7 text-lg text-center md:text-start text-deep-blue dark:text-white">
@@ -54,7 +54,7 @@ const Landing = ({ setSelectedPage, name, desc, role }) => {
           </p>
         </motion.div>
         <motion.div
-          className="flex mt-5 justify-center md:justify-start gap-2"
+          className="flex mt-5 justify-center md:justify-start md:gap-2"
           initial="hidden"
           whileInView="visible"
           viewport={{ once: true, amount: 0.5 }}
@@ -92,7 +92,9 @@ const Landing = ({ setSelectedPage, name, desc, role }) => {
             visible: { opacity: 1, x: 0 },
           }}
         >
-          <SocialMediaIcons />
+          <div className="flex justify-center md:justify-start my-10 gap-7">
+            <SocialMediaIcons />
+          </div>
         </motion.div>
       </div>
     </section>
