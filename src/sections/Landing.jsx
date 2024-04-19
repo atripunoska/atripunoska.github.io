@@ -3,9 +3,18 @@ import useMediaQuery from "../hooks/useMediaQuery";
 import { motion } from "framer-motion";
 import AnchorLink from "react-anchor-link-smooth-scroll";
 import SocialMediaIcons from "../components/SocialMediaIcons";
+import ReactGA from "react-ga4";
 
 const Landing = ({ setSelectedPage, name, desc, role }) => {
   const isAboveMediumScreens = useMediaQuery("(min-width:1060px)");
+
+  function handleResumeClick() {
+    ReactGA.event({
+      category: "User",
+      action: "Clicked on resume button",
+    });
+  }
+
   return (
     <section
       id="home"
@@ -77,6 +86,7 @@ const Landing = ({ setSelectedPage, name, desc, role }) => {
             title="Resume"
             target="_blank"
             className="bg-deep-blue border-2 border-deep-blue text-white dark:bg-white dark:text-deep-blue dark:hover:bg-dark-blue dark:hover:text-white dark:border-white hover:bg-white hover:text-deep-blue hover:dark:bg-deep-blue transition duration-500 py-3 px-7 flex items-center justify-center font-playfair px-10"
+            onClick={handleResumeClick}
           >
             Resume
           </a>

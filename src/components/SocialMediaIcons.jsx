@@ -1,6 +1,21 @@
 import React from "react";
+import ReactGA from "react-ga4";
 
 const SocialMediaIcons = () => {
+  function handleLinkedInClick() {
+    ReactGA.event({
+      category: "User",
+      action: "Clicked on LinkedIn profile",
+    });
+  }
+
+  function handleGithubClick() {
+    ReactGA.event({
+      category: "User",
+      action: "Clicked on GitHub profile",
+    });
+  }
+
   return (
     <>
       <a
@@ -9,6 +24,7 @@ const SocialMediaIcons = () => {
         target="_blank"
         rel="noreferrer"
         title="LinkedIn"
+        onClick={handleLinkedInClick}
       >
         <svg
           xmlns="http://www.w3.org/2000/svg"
@@ -33,6 +49,7 @@ const SocialMediaIcons = () => {
         target="_blank"
         rel="noreferrer"
         title="Github"
+        onClick={handleGithubClick}
       >
         <svg
           xmlns="http://www.w3.org/2000/svg"
