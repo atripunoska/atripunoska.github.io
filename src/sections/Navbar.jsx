@@ -1,23 +1,6 @@
 import { useState } from "react";
-import AnchorLink from "react-anchor-link-smooth-scroll";
+import Link from "../components/Link";
 import useMediaQuery from "../hooks/useMediaQuery";
-
-const Link = ({ page, selectedPage, setSelectedPage }) => {
-  const lowerCasePage = page.toLowerCase();
-  return (
-    <AnchorLink
-      className={`${
-        selectedPage === lowerCasePage
-          ? "text-dark-purple dark:text-light-green"
-          : "text-dark-grey dark:text-white"
-      } dark:hover:text-light-green hover:text-dark-purple transition duration-500 font-mono font-light`}
-      href={`#${lowerCasePage}`}
-      onClick={() => setSelectedPage(lowerCasePage)}
-    >
-      {page}
-    </AnchorLink>
-  );
-};
 
 const Navbar = ({
   isTopOfPage,
@@ -32,14 +15,14 @@ const Navbar = ({
 
   const navbarBackground = isTopOfPage
     ? ""
-    : "bg-white dark:bg-deep-blue/80 md:drop-shadow-md  md:dark:backdrop-blur-md";
+    : "bg-white dark:bg-deep-blue/80 sm:drop-shadow-md sm:dark:backdrop-blur-md";
   return (
     <nav className={`${navbarBackground} z-40 w-full fixed top-0 py-4 isolate`}>
       <div className="flex items-center justify-between mx-auto w-5/6">
-        <img src="/assets/logo.png" alt="Logo" className="w-10 h-auto" />
+        <img src="/assets/logo.svg" alt="Logo" className="w-12 h-auto" />
 
         {isAboveSmallScreens ? (
-          <div className="flex justify-between gap-16 font-opensans text-sm font-semibold items-center ">
+          <div className="flex justify-between gap-12 lg:gap-16 font-opensans text-sm font-semibold items-center ">
             <Link
               page="Home"
               selectedPage={selectedPage}
@@ -106,7 +89,11 @@ const Navbar = ({
                 </svg>
               )}
             </button>
-            <button className="p-2" aria-label="Menu open">
+            <button
+              className="p-2"
+              aria-label="Menu open"
+              onClick={() => setIsMenuToggled(!isMenuToggled)}
+            >
               <svg
                 width="24"
                 height="24"
@@ -124,11 +111,11 @@ const Navbar = ({
           </div>
         )}
         {!isAboveSmallScreens && isMenuToggled && (
-          <div className="fixed right-0 bottom-0 h-full dark:bg-deep-blue bg-white w-[300px]">
+          <div className="fixed right-0 bottom-0 h-full dark:bg-deep-blue bg-white w-full">
             <div className="flex justify-end p-12 ">
               <button
                 onClick={() => setIsMenuToggled(!isMenuToggled)}
-                className="absolute top-6 right-8"
+                className="absolute top-8 right-12"
                 aria-label="Close menu"
               >
                 <svg
@@ -146,7 +133,7 @@ const Navbar = ({
               </button>
             </div>
 
-            <div className="flex flex-col gap-10 ml-[33%] text-2xl dark:text-white text-deep-blue">
+            <div className="flex flex-col gap-10 text-2xl dark:text-white text-deep-blue justify-center text-center">
               <Link
                 page="Home"
                 selectedPage={selectedPage}

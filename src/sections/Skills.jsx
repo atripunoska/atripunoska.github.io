@@ -33,12 +33,10 @@ const Skills = ({ technical, personal }) => {
                   >
                     <svg
                       xmlns="http://www.w3.org/2000/svg"
-                      //  xmlns:xlink="http://www.w3.org/1999/xlink"
                       version="1.1"
                       width="8"
                       height="8"
                       viewBox="0 0 256 256"
-                      //  xml:space="preserve"
                     >
                       <defs></defs>
                       <g
