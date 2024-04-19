@@ -96,7 +96,7 @@ const Projects = ({ projects }) => {
   return (
     <section
       id="projects"
-      className="pt-48 pb-48 dark:text-white text-deep-blue"
+      className="pt-18 pb-24 md:pt-48 md:pb-48 dark:text-white text-deep-blue"
     >
       {/* HEADINGS */}
       <motion.div

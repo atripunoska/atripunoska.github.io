@@ -23,7 +23,7 @@ const Experience = ({ experience }) => {
   return (
     <section
       id="experience"
-      className="pt-48 pb-48 dark:text-white text-deep-blue"
+      className="pt-18 pb-18 md:pt-48 md:pb-48 dark:text-white text-deep-blue"
     >
       <motion.div
         initial="hidden"
@@ -41,7 +41,7 @@ const Experience = ({ experience }) => {
       </motion.div>
 
       <motion.div
-        className="mt-48 md:flex md:w-4/5 mx-auto gap-3 items-start min-h-max"
+        className="mt-24 md:mt-48 md:flex md:w-4/5 mx-auto gap-3 items-start min-h-max"
         initial="hidden"
         whileInView="visible"
         viewport={{ once: true, amount: 0.5 }}

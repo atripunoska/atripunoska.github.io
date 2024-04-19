@@ -5,7 +5,7 @@ import { motion } from "framer-motion";
 const Skills = ({ technical, personal }) => {
   return (
     <section id="skills" className="pt-10 pb-24 dark:text-white text-deep-blue">
-      <div className="mt-32">
+      <div className="md:mt-32">
         <motion.div
           className="md:w-1/3"
           initial="hidden"
