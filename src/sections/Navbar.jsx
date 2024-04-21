@@ -30,34 +30,34 @@ const Navbar = ({
         {isAboveSmallScreens ? (
           <div className="flex justify-between gap-12 lg:gap-16 font-opensans text-sm font-semibold items-center ">
             <Link
-              page="Home"
+              page="About"
               selectedPage={selectedPage}
               setSelectedPage={setSelectedPage}
-              onClick={handleClick}
+              handleClick={handleClick}
             />
             <Link
               page="Skills"
               selectedPage={selectedPage}
               setSelectedPage={setSelectedPage}
-              onClick={handleClick}
+              handleClick={handleClick}
             />
             <Link
               page="Projects"
               selectedPage={selectedPage}
               setSelectedPage={setSelectedPage}
-              onClick={handleClick}
+              handleClick={handleClick}
             />
             <Link
               page="Experience"
               selectedPage={selectedPage}
               setSelectedPage={setSelectedPage}
-              onClick={handleClick}
+              handleClick={handleClick}
             />
             <Link
               page="Contact"
               selectedPage={selectedPage}
               setSelectedPage={setSelectedPage}
-              onClick={handleClick}
+              handleClick={handleClick}
             />
             <button
               onClick={handleDarkMode}
@@ -146,34 +146,34 @@ const Navbar = ({
 
             <div className="flex flex-col gap-10 text-2xl dark:text-white text-deep-blue justify-center text-center">
               <Link
-                page="Home"
+                page="About"
                 selectedPage={selectedPage}
                 setSelectedPage={setSelectedPage}
-                onClick={handleClick}
+                handleClick={handleClick}
               />
               <Link
                 page="Skills"
                 selectedPage={selectedPage}
                 setSelectedPage={setSelectedPage}
-                onClick={handleClick}
+                handleClick={handleClick}
               />
               <Link
                 page="Projects"
                 selectedPage={selectedPage}
                 setSelectedPage={setSelectedPage}
-                onClick={handleClick}
+                handleClick={handleClick}
               />
               <Link
                 page="Experience"
                 selectedPage={selectedPage}
                 setSelectedPage={setSelectedPage}
-                onClick={handleClick}
+                handleClick={handleClick}
               />
               <Link
                 page="Contact"
                 selectedPage={selectedPage}
                 setSelectedPage={setSelectedPage}
-                onClick={handleClick}
+                handleClick={handleClick}
               />
             </div>
           </div>

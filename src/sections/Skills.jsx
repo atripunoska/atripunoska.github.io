@@ -23,12 +23,14 @@ const Skills = ({ technical, personal }) => {
         </motion.div>
         <div className="md:flex gap-24 mt-20">
           <div className="w-full md:w-2/3">
-            <div className="text-2xl mb-6 font-semibold ">Technical skills</div>
-            <ul className="grid grid-cols-2 md:grid-cols-4 gap-4 ">
+            <div className="text-2xl mb-6 font-semibold font-inter">
+              Technical skills
+            </div>
+            <ul className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-4 ">
               {technical.map((skill) => {
                 return (
                   <li
-                    className="font-light  font-mono flex  items-center gap-2"
+                    className="font-light  font-mono flex text-sm md:text-base items-center gap-2"
                     key={skill}
                   >
                     <svg
@@ -79,13 +81,16 @@ const Skills = ({ technical, personal }) => {
             </ul>
           </div>
           <div>
-            <div className="text-2xl mb-6 font-semibold mt-20 md:mt-0">
+            <div className="text-2xl mb-6 font-semibold font-inter mt-20 md:mt-0">
               Soft skills
             </div>
             <ul>
               {personal.map((skill) => {
                 return (
-                  <li className="flex gap-2 items-center" key={skill}>
+                  <li
+                    className="flex gap-2 items-center text-sm md:text-base mb-1"
+                    key={skill}
+                  >
                     <svg
                       className="w-3.5 h-3.5 text-blue-600 lg:w-3 lg:h-3 dark:text-blue-300"
                       aria-hidden="true"
@@ -101,7 +106,7 @@ const Skills = ({ technical, personal }) => {
                         d="M1 5.917 5.724 10.5 15 1.5"
                       />
                     </svg>
-                    <span className="font-extralight font-inter">{skill}</span>
+                    <span className="font-light font-inter">{skill}</span>
                   </li>
                 );
               })}

@@ -15,7 +15,7 @@ function App() {
   const [isFocused, setIsFocused] = useState(false);
   const [position, setPosition] = useState({ x: 0, y: 0 });
   const [opacity, setOpacity] = useState(0);
-  const [selectedPage, setSelectedPage] = useState("home");
+  const [selectedPage, setSelectedPage] = useState("about");
   const [isTopOfPage, setIsTopOfPage] = useState(true);
   const [isDarkMode, setIsDarkMode] = useState(false);
 
