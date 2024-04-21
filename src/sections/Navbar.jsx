@@ -16,6 +16,12 @@ const Navbar = ({
   const navbarBackground = isTopOfPage
     ? ""
     : "bg-white dark:bg-deep-blue/80 sm:drop-shadow-md sm:dark:backdrop-blur-md";
+
+  function handleClick() {
+    if (!isAboveSmallScreens) {
+      setIsMenuToggled(false);
+    }
+  }
   return (
     <nav className={`${navbarBackground} z-40 w-full fixed top-0 py-4 isolate`}>
       <div className="flex items-center justify-between mx-auto w-5/6">
@@ -27,26 +33,31 @@ const Navbar = ({
               page="Home"
               selectedPage={selectedPage}
               setSelectedPage={setSelectedPage}
+              onClick={handleClick}
             />
             <Link
               page="Skills"
               selectedPage={selectedPage}
               setSelectedPage={setSelectedPage}
+              onClick={handleClick}
             />
             <Link
               page="Projects"
               selectedPage={selectedPage}
               setSelectedPage={setSelectedPage}
+              onClick={handleClick}
             />
             <Link
               page="Experience"
               selectedPage={selectedPage}
               setSelectedPage={setSelectedPage}
+              onClick={handleClick}
             />
             <Link
               page="Contact"
               selectedPage={selectedPage}
               setSelectedPage={setSelectedPage}
+              onClick={handleClick}
             />
             <button
               onClick={handleDarkMode}
@@ -138,26 +149,31 @@ const Navbar = ({
                 page="Home"
                 selectedPage={selectedPage}
                 setSelectedPage={setSelectedPage}
+                onClick={handleClick}
               />
               <Link
                 page="Skills"
                 selectedPage={selectedPage}
                 setSelectedPage={setSelectedPage}
+                onClick={handleClick}
               />
               <Link
                 page="Projects"
                 selectedPage={selectedPage}
                 setSelectedPage={setSelectedPage}
+                onClick={handleClick}
               />
               <Link
                 page="Experience"
                 selectedPage={selectedPage}
                 setSelectedPage={setSelectedPage}
+                onClick={handleClick}
               />
               <Link
                 page="Contact"
                 selectedPage={selectedPage}
                 setSelectedPage={setSelectedPage}
+                onClick={handleClick}
               />
             </div>
           </div>
