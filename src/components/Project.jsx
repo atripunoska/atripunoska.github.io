@@ -7,7 +7,7 @@ const projectVariant = {
 };
 
 const Project = ({ title, description, image, liveUrl, github, techStack }) => {
-  const overlayStyles = `absolute h-full w-full opacity-90 md:opacity-0 hover:opacity-90 transition duration-500
+  const overlayStyles = `absolute h-full w-full opacity-90 md:opacity-0 hover:opacity-90 focus:opacity-90 transition duration-500
       bg-grey z-30 flex flex-col justify-center items-center text-center p-10 md:p-16 text-deep-blue`;
 
   return (

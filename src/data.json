@@ -35,7 +35,7 @@
     {
       "projectName": "REST Countries API with theme switcher",
       "projectDescription": "Web application that shows all the countries from an API, allows filtering by region and separate details page for a selected country",
-      "projectImage": "./assets/country-switcher.png",
+      "projectImage": "./assets/country-switcher.webp",
       "projectLiveUrl": "https://country-switcher.netlify.app/",
       "projectGithubUrl": "https://github.com/atripunoska/country-switcher",
       "techStack": ["TailwindCSS", "React", "React Router", "Vite", "API"]
@@ -43,7 +43,7 @@
     {
       "projectName": "Job listings with filtering",
       "projectDescription": "Web application that filters job listings based on selected categories",
-      "projectImage": "./assets/job-listing.png",
+      "projectImage": "./assets/job-listing.webp",
       "projectLiveUrl": "https://jobs-listing-filtering.netlify.app/",
       "projectGithubUrl": "https://github.com/atripunoska/job-listings",
       "techStack": ["TailwindCSS", "React", "Vite"]
@@ -51,7 +51,7 @@
     {
       "projectName": "Advice Generator",
       "projectDescription": "Simple web app that displays different advices using API calls",
-      "projectImage": "./assets/advice-generator.png",
+      "projectImage": "./assets/advice-generator.webp",
       "projectLiveUrl": "https://fm-advice-generator-application.netlify.app/",
       "projectGithubUrl": "https://github.com/atripunoska/advice-generator",
       "techStack": ["React", "Vite", "TypeScript"]
@@ -59,7 +59,7 @@
     {
       "projectName": "Insure Landing Page",
       "projectDescription": "Landing web page for an insurance company that has an optimal layout for the site depending on device's screen size",
-      "projectImage": "./assets/insure.png",
+      "projectImage": "./assets/insure.webp",
       "projectLiveUrl": "https://atripunoska.github.io/Insure-Landing-Page/",
       "projectGithubUrl": "https://github.com/atripunoska/Insure-Landing-Page",
       "techStack": ["HTML5", "CSS"]
@@ -67,7 +67,7 @@
     {
       "projectName": "Easybank Landing Page",
       "projectDescription": "Landing web page for an insurance company that has an optimal layout for the site depending on device's screen size using TailwindCSS",
-      "projectImage": "./assets/easybank.png",
+      "projectImage": "./assets/easybank.webp",
       "projectLiveUrl": "https://atripunoska.github.io/easybank-landing-page/",
       "projectGithubUrl": "https://github.com/atripunoska/easybank-landing-page",
       "techStack": ["HTML5", "TailwindCSS", "AlpineJs"]

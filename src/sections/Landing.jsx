@@ -25,7 +25,7 @@ const Landing = ({ setSelectedPage, name, desc, role }) => {
         {isAboveMediumScreens ? (
           <div className="relative z-0 ml-20 before:absolute before:-top-10 before:-left-10  before:w-full before:max-w-[500px] before:h-full before:border-2 before:border-deep-blue dark:before:border-white before:z-[-1]">
             <img
-              src="assets/profile-image.jpg"
+              src="assets/profile-image.webp"
               alt="profile"
               className="z-10 w-full max-width-[400px] md:max-w-[600px]"
             />
@@ -33,7 +33,7 @@ const Landing = ({ setSelectedPage, name, desc, role }) => {
         ) : (
           <div>
             <img
-              src="assets/profile-image.jpg"
+              src="assets/profile-image.webp"
               alt="profile"
               className="z-10 w-full max-width-[400px] md:max-w-[600px]"
             />
