@@ -17,6 +17,9 @@ const Link = ({ page, selectedPage, setSelectedPage, handleClick }) => {
       } dark:hover:text-light-green hover:text-dark-purple transition duration-500 font-mono font-light`}
       href={`#${lowerCasePage}`}
       onClick={onHandleClick}
+      name={lowerCasePage}
+      tabIndex={0}
+      role="button"
     >
       {page}
     </AnchorLink>

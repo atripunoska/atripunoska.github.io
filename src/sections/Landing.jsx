@@ -77,6 +77,9 @@ const Landing = ({ setSelectedPage, name, desc, role }) => {
             className="bg-white text-deep-blue dark:bg-deep-blue dark:text-white border-deep-blue dark:border-white dark:hover:bg-white dark:hover:text-deep-blue border-2 rounded-sm py-3 px-7 font-semibold hover:bg-deep-blue hover:text-white transition duration-500 font-playfair font-light"
             onClick={() => setSelectedPage("contact")}
             href="#contact"
+            name="contact"
+            role="button"
+            tabIndex={0}
           >
             Contact Me
           </AnchorLink>
@@ -87,6 +90,9 @@ const Landing = ({ setSelectedPage, name, desc, role }) => {
             target="_blank"
             className="bg-deep-blue border-2 border-deep-blue text-white dark:bg-white dark:text-deep-blue dark:hover:bg-dark-blue dark:hover:text-white dark:border-white hover:bg-white hover:text-deep-blue hover:dark:bg-deep-blue transition duration-500 py-3 px-7 flex items-center justify-center font-playfair px-10"
             onClick={handleResumeClick}
+            name="resume"
+            role="button"
+            tabIndex={0}
           >
             Resume
           </a>

@@ -30,6 +30,9 @@ const Contact = () => {
           <a
             href="mailto:atripunoska@gmail.com"
             className="bg-white text-deep-blue dark:bg-deep-blue dark:text-white border-deep-blue dark:border-white dark:hover:bg-white dark:hover:text-deep-blue border-2 rounded-sm py-3 px-7 font-semibold hover:bg-deep-blue hover:text-white transition duration-500 font-playfair font-light"
+            name="Let's talk"
+            tabIndex={0}
+            role="button"
           >
             Let's talk
           </a>

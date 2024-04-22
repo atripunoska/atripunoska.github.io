@@ -32,6 +32,7 @@ const Project = ({ title, description, image, liveUrl, github, techStack }) => {
             title="Project URL"
             rel="noreferrer"
             className="hover:opacity-50 transition duration-500"
+            tabIndex={0}
           >
             <svg
               fill="#000000"
@@ -61,6 +62,7 @@ const Project = ({ title, description, image, liveUrl, github, techStack }) => {
             title="Github URL"
             rel="noreferrer"
             className="hover:opacity-50 transition duration-500"
+            tabIndex={0}
           >
             <svg
               xmlns="http://www.w3.org/2000/svg"
