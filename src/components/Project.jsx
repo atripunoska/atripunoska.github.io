@@ -80,7 +80,7 @@ const Project = ({ title, description, image, liveUrl, github, techStack }) => {
           </a>
         </div>
       </div>
-      <img src={image} alt={title} />
+      <img src={image} alt={title} width={400} height={403} />
     </motion.div>
   );
 };

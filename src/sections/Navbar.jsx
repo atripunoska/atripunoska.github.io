@@ -25,7 +25,13 @@ const Navbar = ({
   return (
     <nav className={`${navbarBackground} z-40 w-full fixed top-0 py-4 isolate`}>
       <div className="flex items-center justify-between mx-auto w-5/6">
-        <img src="/assets/logo.svg" alt="Logo" className="w-12 h-auto" />
+        <img
+          src="/assets/logo.svg"
+          alt="Logo"
+          className="w-12 h-auto"
+          width={199}
+          height={216}
+        />
 
         {isAboveSmallScreens ? (
           <div className="flex justify-between gap-12 lg:gap-16 font-opensans text-sm font-semibold items-center ">

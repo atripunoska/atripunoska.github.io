@@ -28,12 +28,16 @@ const Landing = ({ setSelectedPage, name, desc, role }) => {
               src="assets/profile-image.webp"
               alt="profile"
               className="z-10 w-full max-width-[400px] md:max-w-[600px]"
+              width={550}
+              height={550}
             />
           </div>
         ) : (
           <div>
             <img
               src="assets/profile-image.webp"
+              width={550}
+              height={550}
               alt="profile"
               className="z-10 w-full max-width-[400px] md:max-w-[600px]"
             />
