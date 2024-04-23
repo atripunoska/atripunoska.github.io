@@ -84,7 +84,7 @@ const Skills = ({ technical, personal }) => {
             <div className="text-2xl mb-6 font-semibold font-inter mt-20 md:mt-0">
               Soft skills
             </div>
-            <ul>
+            <ul className="grid grid-cols-2 md:grid-cols-1 gap-2 md:gap-0">
               {personal.map((skill) => {
                 return (
                   <li
