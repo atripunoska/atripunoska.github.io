@@ -1,9 +1,6 @@
 /** @type {import('tailwindcss').Config} */
 module.exports = {
-  content: [
-    "./src/**/*.{html,js,jsx}",
-    "./node_modules/tw-elements-react/dist/js/**/*.js",
-  ],
+  content: ["./src/**/*.{html,js,jsx}"],
   mode: "jit",
   darkMode: "class",
   theme: {
@@ -48,5 +45,4 @@ module.exports = {
       xl: "1700px",
     },
   },
-  plugins: [require("tw-elements-react/dist/plugin.cjs")],
 };

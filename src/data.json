@@ -75,6 +75,7 @@
   ],
   "experience": [
     {
+      "id": 4,
       "company": "Valtech",
       "company_url": "https://www.valtech.com",
       "role": "Frontend Engineer",
@@ -100,6 +101,7 @@
       ]
     },
     {
+      "id": 3,
       "company": "IWM Network",
       "company_url": "https://iwmnetwork.com/",
       "role": "Frontend Developer",
@@ -127,6 +129,7 @@
       ]
     },
     {
+      "id": 2,
       "company": "iBorn.net",
       "company_url": "https://iborn.net/",
       "role": "Intern",
@@ -139,6 +142,7 @@
       "skills": ["CSS3", "Version Control", "Responsive design"]
     },
     {
+      "id": 1,
       "company": "Duna Computers",
       "company_url": "https://duna.mk/",
       "role": "Intern",
@@ -152,6 +156,7 @@
       "skills": ["HTML", "CSS", "Bootstrap"]
     },
     {
+      "id": 0,
       "company": "Komercijalna Banka AD",
       "company_url": "https://kb.com.mk/",
       "role": "Intern",
