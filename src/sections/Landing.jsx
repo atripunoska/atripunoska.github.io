@@ -62,7 +62,7 @@ const Landing = ({ setSelectedPage, name, desc, role }) => {
           <h2 className="text-2xl md:text-3xl text-center md:text-start font-mono mt-4 text-deep-blue dark:text-white">
             {role}
           </h2>
-          <p className="mt-10 mb-7 text-lg text-center md:text-start text-deep-blue dark:text-white">
+          <p className="mt-10 mb-7 text-center md:text-start text-deep-blue dark:text-white whitespace-pre-wrap">
             {desc}
           </p>
         </motion.div>

@@ -21,11 +21,18 @@ const Contact = () => {
         <h3 className="font-playfair font-semibold text-4xl text-center mb-12">
           GET IN TOUCH
         </h3>
-        <p className="text-xl mb-12 font-light font-inter  text-deep-blue dark:text-white mx-auto text-center md:w-2/3">
-          Have a question or project? <br />
-          I'm keen to explore additional opportunities that spark creativity and
-          challenge.
-        </p>
+        <div className="mb-12 font-light font-inter  text-deep-blue dark:text-white mx-auto text-center md:w-2/3">
+          <p className="mb-3">
+            Ready to turn your ideas into reality? Let's collaborate!
+          </p>
+          <p>
+            Whether you have a project in mind, want to discuss a potential
+            opportunity, or just want to say hello, I'd love to hear from you.
+            <br />
+            <br />
+            Drop me a message and I'll get back to you as soon as possible.
+          </p>
+        </div>
         <div className="text-center">
           <a
             href="mailto:atripunoska@gmail.com"
