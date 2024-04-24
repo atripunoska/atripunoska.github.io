@@ -33,7 +33,7 @@ const Projects = ({ projects }) => {
           <div className="flex justify-center mt-5"></div>
         </div>
         <p className="mt-10 mb-10">
-          Here are some of my personal projects I've worked on.
+          Explore some of my personal projects below:
         </p>
       </motion.div>
 
