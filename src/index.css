@@ -1,12 +1,34 @@
-@import url("https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600&family=Playfair+Display:wght@400;600&display=swap");
-@import url("https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap");
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600&family=Playfair+Display:wght@400;600&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap');
 
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
+@import 'tailwindcss';
+
 body {
   margin: 0px;
   width: 100%;
   min-height: 100%;
   overflow-x: hidden;
+}
+@theme {
+  --font-sans: Inter, sans-serif;
+  --font-serif: Playfair Display, serif;
+  --color-blue: #2cbce9;
+  --color-red: #dc4492;
+  --color-yellow: #fdcc49;
+  --color-grey: #ededed;
+  --color-deep-blue: #19180a;
+  --color-dark-grey: #757575;
+  --color-opaque-black: rgba(0, 0, 0, 0.35);
+  --color-light-green: #c3ffb9;
+  --color-dark-purple: #711772;
+  --font-playfair: 'Playfair Display', 'serif';
+  --font-opensans: 'Open Sans', 'sans-serif';
+  --font-mono: 'PT Mono', 'monospace';
+  --font-inter: 'Inter', 'sans-serif';
+  --breakpoint-xs: 480px;
+  --breakpoint-ss: 620px;
+  --breakpoint-sm: 768px;
+  --breakpoint-md: 1060px;
+  --breakpoint-lg: 1200px;
+  --breakpoint-xl: 1700px;
 }
