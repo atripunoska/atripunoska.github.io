@@ -1,21 +1,21 @@
-import { useState, useEffect, useRef } from "react";
-import data from "./data.json";
-import Navbar from "./sections/Navbar";
-import Landing from "./sections/Landing";
-import Skills from "./sections/Skills";
-import Projects from "./sections/Projects";
-import Experience from "./sections/Experience";
-import Contact from "./sections/Contact";
-import Footer from "./components/Footer";
-import ReactGA from "react-ga4";
-ReactGA.initialize("G-W7Y6FG7HDE");
+import { useState, useEffect, useRef } from 'react';
+import data from './data.json';
+import Navbar from './sections/Navbar';
+import Landing from './sections/Landing';
+import Skills from './sections/Skills';
+import Projects from './sections/Projects';
+import Experience from './sections/Experience';
+import Contact from './sections/Contact';
+import Footer from './components/Footer';
+import ReactGA from 'react-ga4';
+ReactGA.initialize('G-W7Y6FG7HDE');
 
 function App() {
   const divRef = useRef();
   const [isFocused, setIsFocused] = useState(false);
   const [position, setPosition] = useState({ x: 0, y: 0 });
   const [opacity, setOpacity] = useState(0);
-  const [selectedPage, setSelectedPage] = useState("about");
+  const [selectedPage, setSelectedPage] = useState('about');
   const [isTopOfPage, setIsTopOfPage] = useState(true);
   const [isDarkMode, setIsDarkMode] = useState(false);
 
@@ -55,10 +55,10 @@ function App() {
       }
     };
 
-    window.addEventListener("scroll", handleScroll);
+    window.addEventListener('scroll', handleScroll);
 
     return () => {
-      window.removeEventListener("scroll", handleScroll);
+      window.removeEventListener('scroll', handleScroll);
     };
   }, []);
 
@@ -67,12 +67,12 @@ function App() {
   }
 
   useEffect(() => {
-    ReactGA.send({ hitType: "pageview", page: window.location.pathname });
+    ReactGA.send({ hitType: 'pageview', page: window.location.pathname });
   }, []);
 
   return (
     <div
-      className={`app relative ${isDarkMode ? "dark" : ""}`}
+      className={`app relative ${isDarkMode ? 'dark' : ''}`}
       ref={divRef}
       onMouseMove={handleMouseMove}
       onFocus={handleFocus}
@@ -80,9 +80,9 @@ function App() {
       onMouseEnter={handleMouseEnter}
       onMouseLeave={handleMouseLeave}
     >
-      <div className="dark:bg-deep-blue bg-white">
+      <div className='dark:bg-deep-blue bg-white'>
         <div
-          className="pointer-events-none absolute inset-0 z-40 opacity-0 transition duration-300 overflow-x-hidden"
+          className='pointer-events-none absolute inset-0 z-40 opacity-0 transition duration-300 overflow-x-hidden'
           style={{
             opacity,
             background: `radial-gradient(600px circle at ${position.x}px ${position.y}px, rgba(255,255,255,.06), transparent 40%)`,
@@ -96,7 +96,7 @@ function App() {
           isDarkMode={isDarkMode}
         />
 
-        <div className="w-5/6 mx-auto md:h-full">
+        <div className='w-5/6 mx-auto md:h-full'>
           <Landing
             setSelectedPage={setSelectedPage}
             name={data.name}
@@ -105,21 +105,21 @@ function App() {
           />
         </div>
 
-        <div className="w-5/6 mx-auto md:h-full ">
+        <div className='w-5/6 mx-auto md:h-full '>
           <Skills
             technical={data.skills.technical}
             personal={data.skills.personal}
           />
         </div>
 
-        <div className="w-5/6 mx-auto ">
+        <div className='w-5/6 mx-auto '>
           <Projects projects={data.projects} />
         </div>
 
-        <div className="w-5/6 mx-auto ">
+        <div className='w-5/6 mx-auto '>
           <Experience experience={data.experience} />
         </div>
-        <div className="w-5/6 mx-auto ">
+        <div className='w-5/6 mx-auto '>
           <Contact />
         </div>
       </div>

@@ -170,10 +170,10 @@ const Experience = ({ experience }) => {
                 key={item.company}
                 onClick={() => handleVerticalClick(item.company)}
                 active={verticalActive === item.company}
-                className={`dark:hover:!bg-white dark:hover:!text-black text-left !px-2 !border-b-0 md:border-l-2 !my-0  !border-gray-200 hover:!border-transparent hover:!bg-deep-blue hover:!text-white  whitespace-nowrap ${
+                className={`dark:hover:bg-white! dark:hover:text-black! text-left px-2! border-b-0! md:border-l-2 my-0!  border-gray-200! hover:border-transparent! hover:!bg-deep-blue hover:text-white!  whitespace-nowrap ${
                   verticalActive === item.company
-                    ? "dark:!border-white !border-black dark:!text-light-green !text-dark-purple"
-                    : "dark:!border-gray-800"
+                    ? "dark:border-white! border-black! dark:!text-light-green !text-dark-purple"
+                    : "dark:border-gray-800!"
                 } `}
               >
                 {item.company}
