@@ -1,76 +1,69 @@
 {
   "name": "Ana Tripunoska",
   "role": "Frontend Engineer",
-  "description": "A passionate frontend engineer dedicated to crafting immersive digital experiences that blend creativity with cutting-edge technology. With a solid foundation in HTML, CSS, and JavaScript, I specialize in translating design concepts into pixel-perfect, interactive interfaces that captivate users and drive engagement.\n\nFrom responsive web applications to dynamic single-page applications (SPAs), I thrive on the challenge of bringing ideas to life in the digital realm. \n\nLet's connect and explore how we can collaborate to build exceptional digital experiences that leave a lasting impression.",
+  "description": "Frontend engineer with 10+ years of experience building fast, accessible web experiences. I specialize in React, TypeScript, and modern CSS — transforming complex designs into pixel-perfect, performant interfaces.\n\nCurrently at Valtech, building enterprise-scale web applications with Adobe Experience Manager for global clients.",
   "skills": {
-    "technical": [
-      "HTML5",
-      "CSS3",
-      "Javascript",
-      "jQuery",
-      "React",
-      "SASS/SCCS",
-      "Bootstrap",
-      "Tailwind",
-      "Wordpress",
-      "WooCommerce",
-      "PHP",
-      "Git",
-      "Photoshop",
-      "Figma",
+    "primary": ["React", "TypeScript", "JavaScript", "Tailwind CSS", "SCSS"],
+    "secondary": ["Vite", "Framer Motion", "REST APIs", "Storybook", "WordPress"],
+    "tools": ["Git", "Figma", "AEM", "Jira", "VS Code", "Chrome DevTools", "Azure DevOps"],
+    "practices": [
+      "Responsive Design",
+      "Web Accessibility",
+      "Performance Optimization",
       "SEO",
-      "Web Accessibility"
-    ],
-    "personal": [
-      "Team Work",
-      "Work Ethic",
-      "Communication",
-      "Listening",
-      "Adaptability",
-      "Problem Solving",
-      "Time Management"
+      "Code Reviews"
     ]
   },
   "projects": [
     {
-      "projectName": "REST Countries API with theme switcher",
-      "projectDescription": "Web application that shows all the countries from an API, allows filtering by region and separate details page for a selected country",
+      "projectId": 1,
+      "projectName": "REST Countries API",
+      "projectDescription": "Interactive app displaying 250+ countries with real-time search, region filtering, and detailed country pages. Implemented debounced search and lazy loading for optimal performance.",
       "projectImage": "./assets/country-switcher.webp",
       "projectLiveUrl": "https://country-switcher.netlify.app/",
       "projectGithubUrl": "https://github.com/atripunoska/country-switcher",
-      "techStack": ["TailwindCSS", "React", "React Router", "Vite", "API"]
+      "techStack": ["React", "Tailwind CSS", "React Router", "REST API", "Vite"],
+      "featured": true
     },
     {
-      "projectName": "Job listings with filtering",
-      "projectDescription": "Web application that filters job listings based on selected categories",
+      "projectId": 2,
+      "projectName": "Job Listings with Filtering",
+      "projectDescription": "Dynamic job board with multi-select category filtering. Built with state management for complex filter logic and smooth animations.",
       "projectImage": "./assets/job-listing.webp",
       "projectLiveUrl": "https://jobs-listing-filtering.netlify.app/",
       "projectGithubUrl": "https://github.com/atripunoska/job-listings",
-      "techStack": ["TailwindCSS", "React", "Vite"]
+      "techStack": ["React", "Tailwind CSS", "Vite"],
+      "featured": false
     },
     {
+      "projectId": 3,
       "projectName": "Advice Generator",
-      "projectDescription": "Simple web app that displays different advices using API calls",
+      "projectDescription": "Minimal app fetching random advice from external API. Built with TypeScript for type safety and clean code practices.",
       "projectImage": "./assets/advice-generator.webp",
       "projectLiveUrl": "https://fm-advice-generator-application.netlify.app/",
       "projectGithubUrl": "https://github.com/atripunoska/advice-generator",
-      "techStack": ["React", "Vite", "TypeScript"]
+      "techStack": ["React", "TypeScript", "Vite", "REST API"],
+      "featured": false
     },
     {
+      "projectId": 4,
       "projectName": "Insure Landing Page",
-      "projectDescription": "Landing web page for an insurance company that has an optimal layout for the site depending on device's screen size",
+      "projectDescription": "Fully responsive landing page with mobile-first approach. Pixel-perfect implementation from Figma design with custom CSS animations.",
       "projectImage": "./assets/insure.webp",
       "projectLiveUrl": "https://atripunoska.github.io/Insure-Landing-Page/",
       "projectGithubUrl": "https://github.com/atripunoska/Insure-Landing-Page",
-      "techStack": ["HTML5", "CSS"]
+      "techStack": ["HTML5", "CSS3", "Responsive Design"],
+      "featured": false
     },
     {
+      "projectId": 5,
       "projectName": "Easybank Landing Page",
-      "projectDescription": "Landing web page for an insurance company that has an optimal layout for the site depending on device's screen size using TailwindCSS",
+      "projectDescription": "Modern banking landing page built with utility-first CSS. Features smooth scroll, responsive navigation, and optimized images.",
       "projectImage": "./assets/easybank.webp",
       "projectLiveUrl": "https://atripunoska.github.io/easybank-landing-page/",
       "projectGithubUrl": "https://github.com/atripunoska/easybank-landing-page",
-      "techStack": ["HTML5", "TailwindCSS", "AlpineJs"]
+      "techStack": ["HTML5", "Tailwind CSS", "Alpine.js"],
+      "featured": false
     }
   ],
   "experience": [
@@ -81,24 +74,14 @@
       "role": "Frontend Engineer",
       "date": "Jan 2022 - Present",
       "bullet_points": [
-        "Implementing user interface components for web site solutions built with Adobe Experience Manager",
-        "Interpreting designs and translating them into pixel-perfect HTML/SCSS/JSX output to create engaging, modern web experiences.",
-        "Ensuring high-performance and compatibility across mobile and desktop browsers using responsive design",
-        "Developing and testing user-facing features that leverage Vanilla JS, React, TypeScript",
-        "Performing bug fixes and code reviews",
-        "Working with experience designers and developers through the stages of design, development, QA, launch, and maintenance."
+        "Build reusable UI components for enterprise clients using React, TypeScript, and Adobe Experience Manager",
+        "Translate Figma designs into pixel-perfect, responsive interfaces",
+        "Optimize web performance through lazy loading, code splitting, and image optimization",
+        "Develop and maintain component library in Storybook for team consistency",
+        "Conduct code reviews and mentor team members on frontend best practices",
+        "Collaborate with cross-functional teams in Agile environment"
       ],
-      "skills": [
-        "React",
-        "Adobe Experience Manager (AEM)",
-        "TypeScript",
-        "Storybook",
-        "SCSS",
-        "Git",
-        "Jira",
-        "Confluence",
-        "Remote Teamwork"
-      ]
+      "skills": ["React", "TypeScript", "Adobe AEM", "Storybook", "SCSS", "Git", "Jira"]
     },
     {
       "id": 3,
@@ -107,26 +90,14 @@
       "role": "Frontend Developer",
       "date": "Mar 2016 - Jan 2022",
       "bullet_points": [
-        "Creating, maintaining and improving websites",
-        "Collaborating with back-end developers and web designers to improve usability",
-        "Building customized features for clients",
-        "Converting PSD files to HTML",
-        "Developing custom WordPress Themes",
-        "Developing custom Liferay Themes",
-        "Developing e-commerce websites using WooCommerce",
-        "Implementing On-Page SEO",
-        "Optimizing sites to improve performance and efficiency"
+        "Developed custom WordPress themes and WooCommerce stores for diverse clients",
+        "Built responsive, cross-browser compatible websites from PSD designs",
+        "Created custom Liferay portal themes for enterprise clients",
+        "Implemented on-page SEO strategies to improve client search visibility",
+        "Optimized site performance through caching and asset optimization",
+        "Worked directly with designers and backend developers to deliver projects"
       ],
-      "skills": [
-        "HTML5",
-        "JavaScript",
-        "WordPress",
-        "WooCommerce",
-        "Liferay",
-        "Material-UI",
-        "CSS3",
-        "Git"
-      ]
+      "skills": ["JavaScript", "WordPress", "WooCommerce", "Liferay", "CSS3", "Git", "SEO"]
     },
     {
       "id": 2,
@@ -135,11 +106,11 @@
       "role": "Intern",
       "date": "Aug 2015 - Sep 2015",
       "bullet_points": [
-        "Maintaining Web Applications",
-        "Designing mobile based features",
-        "Writing functional required documents and guides"
+        "Maintained and updated web applications",
+        "Designed mobile-responsive features",
+        "Wrote technical documentation and user guides"
       ],
-      "skills": ["CSS3", "Version Control", "Responsive design"]
+      "skills": ["CSS3", "Git", "Responsive Design"]
     },
     {
       "id": 1,
@@ -148,10 +119,9 @@
       "role": "Intern",
       "date": "Sep 2014 - May 2015",
       "bullet_points": [
-        "Maintaining Web Applications",
-        "Creating Web Applications with Bootstrap",
-        "Creating CSS files for websites and assist web developers in effective implementation",
-        "Testing websites and reporting bugs"
+        "Built responsive web pages using Bootstrap framework",
+        "Created and maintained CSS stylesheets",
+        "Tested websites and documented bugs for development team"
       ],
       "skills": ["HTML", "CSS", "Bootstrap"]
     },
@@ -162,14 +132,16 @@
       "role": "Intern",
       "date": "Jan 2013 - Feb 2013",
       "bullet_points": [
-        "Working with databases",
-        "Writing SQL queries to insert, modify and delete data in database"
+        "Worked with relational databases",
+        "Wrote SQL queries for data management"
       ],
       "skills": ["SQL"]
     }
   ],
   "contact": {
-    "email": "atripunoska@gmail.com",
+    "email": "hello@anatripunoska.com",
+    "location": "Macedonia",
+    "availability": "Open to remote opportunities",
     "socials": {
       "linkedin": "https://www.linkedin.com/in/ana-tripunoska",
       "github": "https://github.com/atripunoska"
