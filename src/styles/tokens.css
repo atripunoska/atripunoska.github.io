@@ -1,0 +1,77 @@
+/* ------------------------------------------------------------------
+   Design tokens — ported from the original mockup
+   These stay as plain CSS variables so the dark/light swap via
+   [data-theme] keeps working exactly like the original.
+------------------------------------------------------------------- */
+
+:root {
+  --font-sans: 'Geist', ui-sans-serif, system-ui, sans-serif;
+  --font-serif: 'Instrument Serif', ui-serif, Georgia, serif;
+  --font-mono: 'JetBrains Mono', ui-monospace, monospace;
+
+  --radius: 14px;
+  --density: 1; /* 0.85 compact … 1.15 comfy */
+  --maxw: 1240px;
+  --gutter: clamp(20px, 4vw, 56px);
+
+  /* dark (default) */
+  --bg: #0a0a0b;
+  --bg-raised: #111113;
+  --bg-sunken: #060607;
+  --fg: #f4f3ef;
+  --fg-muted: #a6a29a;
+  --fg-dim: #6b6862;
+  --line: #1c1c1f;
+  --line-strong: #2a2a2e;
+  --accent: #e8e8e8;
+  --accent-ink: #0a0a0b;
+  --hairline: rgba(255, 255, 255, 0.08);
+  --glass: rgba(20, 20, 22, 0.6);
+  --shadow:
+    0 1px 0 rgba(255, 255, 255, 0.04) inset,
+    0 20px 60px -30px rgba(0, 0, 0, 0.8);
+}
+
+html[data-theme='light'] {
+  --bg: #f7f6f2;
+  --bg-raised: #ffffff;
+  --bg-sunken: #efede7;
+  --fg: #17161a;
+  --fg-muted: #5d5a54;
+  --fg-dim: #8a857c;
+  --line: #e5e2d9;
+  --line-strong: #d4cfc1;
+  --accent: #0a0a0b;
+  --accent-ink: #f7f6f2;
+  --hairline: rgba(0, 0, 0, 0.08);
+  --glass: rgba(255, 255, 255, 0.7);
+  --shadow:
+    0 1px 0 rgba(255, 255, 255, 0.6) inset,
+    0 20px 50px -30px rgba(40, 35, 25, 0.25);
+}
+
+/* ------------------------------------------------------------------
+   Bridge into Tailwind v4 — lets you write bg-bg, text-fg, text-fg-muted,
+   border-line, etc. as real Tailwind utility classes.
+   "inline" tells Tailwind to use these as-is rather than trying to
+   resolve them at build time, which is required since their values
+   change at runtime via [data-theme].
+------------------------------------------------------------------- */
+@theme inline {
+  --color-bg: var(--bg);
+  --color-bg-raised: var(--bg-raised);
+  --color-bg-sunken: var(--bg-sunken);
+  --color-fg: var(--fg);
+  --color-fg-muted: var(--fg-muted);
+  --color-fg-dim: var(--fg-dim);
+  --color-line: var(--line);
+  --color-line-strong: var(--line-strong);
+  --color-accent: var(--accent);
+  --color-accent-ink: var(--accent-ink);
+
+  --font-sans: var(--font-sans);
+  --font-serif: var(--font-serif);
+  --font-mono: var(--font-mono);
+
+  --radius-default: var(--radius);
+}
