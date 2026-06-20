@@ -5,11 +5,13 @@ export const skillGroups: SkillGroup[] = [
     id: 'languages',
     label: 'Languages',
     skills: ['TypeScript', 'JavaScript (ES2022+)', 'HTML5', 'CSS3'],
+    primary: ['TypeScript', 'JavaScript (ES2022+)'],
   },
   {
     id: 'frameworks',
-    label: 'Frameworks & Libraries',
+    label: 'Frameworks & UI',
     skills: ['React', 'Next.js', 'TanStack Query', 'Zustand', 'Tailwind CSS'],
+    primary: ['React', 'Next.js'],
   },
   {
     id: 'platforms',
@@ -19,6 +21,7 @@ export const skillGroups: SkillGroup[] = [
       'WooCommerce',
       'Google Maps API',
     ],
+    primary: ['Adobe Experience Manager (AEM)'],
   },
   {
     id: 'tooling',
@@ -32,5 +35,6 @@ export const skillGroups: SkillGroup[] = [
       'MCP',
       'WCAG 2.1 / ARIA',
     ],
+    primary: ['Claude Code'],
   },
 ];

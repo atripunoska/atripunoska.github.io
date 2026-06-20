@@ -30,4 +30,5 @@ export interface SkillGroup {
   id: string;
   label: string;
   skills: string[];
+  primary?: string[]; // subset of `skills` rendered as highlighted/filled chips
 }
