@@ -1,0 +1,94 @@
+import type { ExperienceEntry } from '../types';
+
+export const experience: ExperienceEntry[] = [
+  {
+    id: 'valtech',
+    role: 'Frontend Engineer',
+    company: 'Valtech',
+    companyUrl: 'https://www.valtech.com',
+    period: 'Jan 2022 — Present',
+    current: true,
+    summary:
+      'Building UI components for enterprise web solutions on Adobe Experience Manager, working across the full design-to-launch cycle.',
+    highlights: [
+      'Implemented UI components for web solutions built on Adobe Experience Manager',
+      'Translated designs into pixel-perfect HTML/SCSS/JSX for engaging, modern web experiences',
+      'Ensured performance and cross-browser compatibility across mobile and desktop with responsive design',
+      'Built and tested user-facing features using Vanilla JS, React, and TypeScript',
+      'Performed bug fixes and code reviews',
+      'Collaborated with experience designers and developers across design, development, QA, launch, and maintenance',
+    ],
+    skills: [
+      'React',
+      'Adobe Experience Manager (AEM)',
+      'TypeScript',
+      'Storybook',
+      'SCSS',
+      'Git',
+      'Jira',
+      'Confluence',
+    ],
+  },
+  {
+    id: 'iwm-network',
+    role: 'Frontend Developer',
+    company: 'IWM Network',
+    companyUrl: 'https://iwmnetwork.com/',
+    period: 'Mar 2016 — Jan 2022',
+    current: false,
+    summary:
+      'Six years building, maintaining, and improving client websites — from WordPress and Liferay theming to custom WooCommerce e-commerce builds.',
+    highlights: [
+      'Created, maintained, and improved websites across a range of clients',
+      'Collaborated with back-end developers and designers to improve usability',
+      'Built customized features tailored to individual client requirements',
+      'Converted PSD designs to HTML',
+      'Developed custom WordPress and Liferay themes',
+      'Built e-commerce websites using WooCommerce',
+      'Implemented on-page SEO and optimized sites for performance',
+    ],
+    skills: [
+      'HTML5',
+      'JavaScript',
+      'WordPress',
+      'WooCommerce',
+      'Liferay',
+      'Material-UI',
+      'CSS3',
+      'Git',
+    ],
+  },
+  {
+    id: 'iborn-net',
+    role: 'Intern',
+    company: 'iBorn.net',
+    companyUrl: 'https://iborn.net/',
+    period: 'Aug 2015 — Sep 2015',
+    current: false,
+    summary:
+      'Early internship focused on web application maintenance and mobile-first feature design.',
+    highlights: [
+      'Maintained existing web applications',
+      'Designed mobile-based features',
+      'Wrote functional requirement documents and guides',
+    ],
+    skills: ['CSS3', 'Version Control', 'Responsive Design'],
+  },
+  {
+    id: 'duna-computers',
+    role: 'Intern',
+    company: 'Duna Computers',
+    companyUrl: 'https://duna.mk/',
+    period: 'Sep 2014 — May 2015',
+    current: false,
+    summary:
+      'First internship — building Bootstrap-based web applications and supporting cross-browser testing.',
+    highlights: [
+      'Maintained existing web applications',
+      'Built web applications using Bootstrap',
+      'Wrote CSS and assisted developers with implementation',
+      'Tested websites and reported bugs',
+    ],
+    skills: ['HTML', 'CSS', 'Bootstrap'],
+  },
+];

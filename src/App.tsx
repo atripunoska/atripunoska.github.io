@@ -1,10 +1,7 @@
 import { SideRail } from './components/layout/SideRail';
 import { Topbar } from './components/layout/Topbar';
-import { useTheme } from './hooks/useTheme';
 
 function App() {
-  const { theme, toggleTheme } = useTheme();
-
   return (
     <div className='bg-bg text-fg min-h-screen font-sans'>
       <Topbar />
