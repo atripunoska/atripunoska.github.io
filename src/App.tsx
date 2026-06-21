@@ -1,5 +1,6 @@
 import { SideRail } from './components/layout/SideRail';
 import { Topbar } from './components/layout/Topbar';
+import { Contact } from './components/sections/Contact';
 import { Experience } from './components/sections/Experience';
 import { Skills } from './components/sections/Skills';
 import { Work } from './components/sections/Work';
@@ -17,12 +18,7 @@ function App() {
         <Work />
         <Skills />
         <Experience />
-        <section
-          id='contact'
-          className='h-screen flex items-center justify-center'
-        >
-          Contact
-        </section>
+        <Contact />
       </main>
     </div>
   );
