@@ -1,7 +1,5 @@
 import { ContactForm } from '../ui/ContactForm';
-
-const GITHUB_URL = 'https://github.com/atripunoska';
-const LINKEDIN_URL = 'https://www.linkedin.com/in/ana-tripunoska/';
+import { LINKS } from '../../data/links';
 
 export function Contact() {
   return (
@@ -25,10 +23,10 @@ export function Contact() {
             </h2>
 
             <a
-              href='mailto:hello@anatripunoska.com'
+              href={`mailto:${LINKS.email}`}
               className='mt-8 inline-flex items-center gap-3 text-[clamp(22px,2.6vw,32px)] tracking-[-0.015em] border-b border-line-strong pb-1.5 transition-all hover:border-fg hover:gap-4.5'
             >
-              hello@anatripunoska.com
+              {LINKS.email}
               <svg
                 viewBox='0 0 24 24'
                 fill='none'
@@ -65,17 +63,17 @@ export function Contact() {
                 </div>
                 <div className='text-fg'>
                   <a
-                    href={GITHUB_URL}
+                    href={LINKS.github}
                     target='_blank'
                     rel='noopener noreferrer'
                     className='border-b border-line-strong hover:border-fg transition-colors'
                   >
                     GitHub
                   </a>
-
-                  {LINKEDIN_URL ? (
+                  {' · '}
+                  {LINKS.linkedin ? (
                     <a
-                      href={LINKEDIN_URL}
+                      href={LINKS.linkedin}
                       target='_blank'
                       rel='noopener noreferrer'
                       className='border-b border-line-strong hover:border-fg transition-colors'
