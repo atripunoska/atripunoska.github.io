@@ -29,6 +29,7 @@ export function Portrait() {
           src='/profile-image.webp'
           alt='Ana Tripunoska'
           className='w-full h-full object-cover'
+          fetchPriority='high'
         />
       </motion.div>
 
