@@ -1,8 +1,8 @@
-import { RAIL_SECTIONS } from '../../types/navigation';
+import { RAIL_SECTIONS, RAIL_SECTION_IDS } from '../../types/navigation';
 import { useActiveSection } from '../../hooks/useActiveSection';
 
 export function SideRail() {
-  const activeId = useActiveSection(RAIL_SECTIONS.map((s) => s.id));
+  const activeId = useActiveSection(RAIL_SECTION_IDS);
 
   return (
     <nav

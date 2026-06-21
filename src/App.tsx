@@ -12,7 +12,7 @@ function App() {
       <Topbar />
       <SideRail />
 
-      <main id='top' className='pt-24'>
+      <main className='pt-4'>
         <Hero />
         <Work />
         <Skills />

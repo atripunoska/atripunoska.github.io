@@ -19,3 +19,5 @@ export const RAIL_SECTIONS: { id: string; label: string }[] = [
   { id: 'experience', label: 'Experience' },
   { id: 'contact', label: 'Contact' },
 ];
+
+export const RAIL_SECTION_IDS: string[] = RAIL_SECTIONS.map((s) => s.id);
