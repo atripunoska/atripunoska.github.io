@@ -1,5 +1,6 @@
 import { ContactForm } from '../ui/ContactForm';
 import { LINKS } from '../../data/links';
+import { trackEvent } from '../../lib/analytics';
 
 export function Contact() {
   return (
@@ -67,6 +68,7 @@ export function Contact() {
                     target='_blank'
                     rel='noopener noreferrer'
                     className='border-b border-line-strong hover:border-fg transition-colors'
+                    onClick={() => trackEvent('social', 'click', 'github')}
                   >
                     GitHub
                   </a>
@@ -77,6 +79,7 @@ export function Contact() {
                       target='_blank'
                       rel='noopener noreferrer'
                       className='border-b border-line-strong hover:border-fg transition-colors'
+                      onClick={() => trackEvent('social', 'click', 'linkedin')}
                     >
                       LinkedIn
                     </a>

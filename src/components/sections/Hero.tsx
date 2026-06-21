@@ -2,6 +2,7 @@ import { motion, useReducedMotion } from 'framer-motion';
 
 import { Portrait } from '../ui/Portrait';
 import { LINKS } from '../../data/links';
+import { trackEvent } from '../../lib/analytics';
 
 const titleRows = [
   ["Hi, I'm Ana —"],
@@ -68,6 +69,7 @@ export function Hero() {
                   href={LINKS.resume}
                   download
                   className='inline-flex items-center gap-2.5 px-[18px] py-3 rounded-full text-sm font-medium border border-accent bg-accent text-accent-ink transition-all hover:-translate-y-px hover:bg-fg hover:border-fg'
+                  onClick={() => trackEvent('resume', 'download')}
                 >
                   <span>Download résumé</span>
                   <svg
@@ -109,6 +111,7 @@ export function Hero() {
                   rel='noopener noreferrer'
                   aria-label='GitHub'
                   className='w-10 h-10 rounded-full border border-line grid place-items-center text-fg-muted transition-all hover:text-fg hover:border-fg hover:-translate-y-0.5'
+                  onClick={() => trackEvent('social', 'click', 'github')}
                 >
                   <svg
                     viewBox='0 0 24 24'
@@ -126,6 +129,7 @@ export function Hero() {
                     rel='noopener noreferrer'
                     aria-label='LinkedIn'
                     className='w-10 h-10 rounded-full border border-line grid place-items-center text-fg-muted transition-all hover:text-fg hover:border-fg hover:-translate-y-0.5'
+                    onClick={() => trackEvent('social', 'click', 'linkedin')}
                   >
                     <svg
                       viewBox='0 0 24 24'

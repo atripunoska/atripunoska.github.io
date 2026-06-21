@@ -1,4 +1,5 @@
 import { useState, type FormEvent } from 'react';
+import { trackEvent } from '../../lib/analytics';
 
 type Status = 'idle' | 'submitting' | 'success' | 'error';
 
@@ -64,6 +65,7 @@ export function ContactForm() {
         body: JSON.stringify(values),
       });
       if (!res.ok) throw new Error('Submission failed');
+      trackEvent('contact', 'submit_success');
       setStatus('success');
     } catch {
       setStatus('error');

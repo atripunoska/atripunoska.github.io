@@ -2,6 +2,7 @@ import { useState } from 'react';
 import { projects } from '../../data/projects';
 import { SectionHead } from '../ui/SectionHead';
 import { ProjectCard } from '../ui/ProjectCard';
+import { trackEvent } from '../../lib/analytics';
 
 export function Work() {
   const [openId, setOpenId] = useState<string | null>(null);
@@ -28,9 +29,11 @@ export function Work() {
               index={index}
               isOpen={openId === project.id}
               onToggle={() =>
-                setOpenId((current) =>
-                  current === project.id ? null : project.id,
-                )
+                setOpenId((current) => {
+                  const next = current === project.id ? null : project.id;
+                  if (next) trackEvent('project', 'expand', project.title);
+                  return next;
+                })
               }
             />
           ))}
