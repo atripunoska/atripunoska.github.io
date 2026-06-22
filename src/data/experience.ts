@@ -24,6 +24,7 @@ export const experience: ExperienceEntry[] = [
       'TypeScript',
       'Storybook',
       'SCSS',
+      'Figma',
       'Git',
       'Jira',
       'Confluence',
@@ -37,7 +38,7 @@ export const experience: ExperienceEntry[] = [
     period: 'Mar 2016 — Jan 2022',
     current: false,
     summary:
-      'Six years building, maintaining, and improving client websites — from WordPress and Liferay theming to custom WooCommerce e-commerce builds.',
+      'Six years building, maintaining, and improving client websites. From WordPress and Liferay theming to custom WooCommerce e-commerce builds.',
     highlights: [
       'Created, maintained, and improved websites across a range of clients',
       'Collaborated with back-end developers and designers to improve usability',
@@ -82,7 +83,7 @@ export const experience: ExperienceEntry[] = [
     period: 'Sep 2014 — May 2015',
     current: false,
     summary:
-      'First internship — building Bootstrap-based web applications and supporting cross-browser testing.',
+      'First internship - building Bootstrap-based web applications and supporting cross-browser testing.',
     highlights: [
       'Maintained existing web applications',
       'Built web applications using Bootstrap',

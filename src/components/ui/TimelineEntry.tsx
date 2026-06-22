@@ -1,14 +1,15 @@
 import type { ExperienceEntry } from '../../types';
+import { TimelineMark } from './TimelineMark';
 
 interface TimelineEntryProps {
   entry: ExperienceEntry;
-  markIndex: number; // cycles through co-mark glyphs for visual variety
+  markIndex: number; // cycles through shapes for visual variety
 }
 
-const MARKS = ['▲', '◆', '●', '■'];
+const SHAPES = ['triangle', 'diamond', 'circle', 'square'] as const;
 
 export function TimelineEntry({ entry, markIndex }: TimelineEntryProps) {
-  const mark = MARKS[markIndex % MARKS.length];
+  const shape = SHAPES[markIndex % SHAPES.length];
 
   return (
     <article className='group relative pt-[22px] pb-[22px] border-t border-line last:border-b grid grid-cols-1 gap-3 md:pl-0'>
@@ -28,10 +29,10 @@ export function TimelineEntry({ entry, markIndex }: TimelineEntryProps) {
         </h3>
         <span className='font-mono text-xs text-fg-muted inline-flex items-center gap-2'>
           <span
-            className='w-[18px] h-[18px] rounded-[4px] bg-bg-raised border border-line grid place-items-center font-serif italic text-xs text-fg'
+            className='w-[18px] h-[18px] rounded-[4px] bg-bg-raised border border-line grid place-items-center text-fg'
             aria-hidden='true'
           >
-            {mark}
+            <TimelineMark shape={shape} className='w-[11px] h-[11px]' />
           </span>
           {entry.companyUrl ? (
             <a

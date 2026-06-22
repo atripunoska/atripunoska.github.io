@@ -14,7 +14,7 @@ export function Skills() {
               <em className='font-serif italic'>making</em> interfaces.
             </>
           }
-          lede='A working toolkit, not a wishlist. Organized by what I actually use day-to-day to ship production UI.'
+          lede='A working toolkit. Organized by what I actually use day-to-day to ship production UI.'
         />
 
         <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 border-t border-line'>

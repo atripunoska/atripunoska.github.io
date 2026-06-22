@@ -5,7 +5,7 @@ import { LINKS } from '../../data/links';
 import { trackEvent } from '../../lib/analytics';
 
 const titleRows = [
-  ["Hi, I'm Ana —"],
+  ["Hi, I'm Ana -"],
   ['a ', { em: 'frontend' }, ' engineer'],
   ['crafting interfaces.'],
 ];

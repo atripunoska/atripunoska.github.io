@@ -18,7 +18,7 @@ export function Work() {
               shipping.
             </>
           }
-          lede='Click any row to expand. Each is a real project — stack, highlights, and what I actually owned.'
+          lede='Click any row to expand. Each is a real project - stack, highlights, and what I actually owned.'
         />
 
         <div className='border-t border-line'>

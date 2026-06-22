@@ -14,7 +14,7 @@ export function Experience() {
               grown.
             </>
           }
-          lede='Seven years across product teams and client work — from internships to senior-track engineering.'
+          lede='Seven years across product teams and client work. From internships to senior-track engineering.'
         />
 
         <div className='relative md:pl-40'>

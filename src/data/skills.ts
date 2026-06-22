@@ -35,6 +35,6 @@ export const skillGroups: SkillGroup[] = [
       'MCP',
       'WCAG 2.1 / ARIA',
     ],
-    primary: ['Claude Code'],
+    primary: ['Git', 'WCAG 2.1 / ARIA'],
   },
 ];

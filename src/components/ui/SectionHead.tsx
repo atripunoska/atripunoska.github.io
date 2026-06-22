@@ -2,7 +2,7 @@ import type { ReactNode } from 'react';
 
 interface SectionHeadProps {
   eyebrow: string;
-  title: ReactNode; // pass JSX so you can wrap part of it in <em> for the serif italic accent
+  title: ReactNode;
   lede: string;
 }
 
