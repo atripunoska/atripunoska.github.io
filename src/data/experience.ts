@@ -11,12 +11,12 @@ export const experience: ExperienceEntry[] = [
     summary:
       'Building UI components for enterprise web solutions on Adobe Experience Manager, working across the full design-to-launch cycle.',
     highlights: [
-      'Implemented UI components for web solutions built on Adobe Experience Manager',
-      'Translated designs into pixel-perfect HTML/SCSS/JSX for engaging, modern web experiences',
-      'Ensured performance and cross-browser compatibility across mobile and desktop with responsive design',
+      'Built and maintained reusable UI components for enterprise web solutions on Adobe Experience Manager, balancing CMS authoring constraints with modern component architecture',
+      'Translated complex designs into pixel-perfect, responsive HTML/SCSS/JSX across mobile and desktop',
+      'Optimized component performance and ensured cross-browser compatibility through systematic testing',
       'Built and tested user-facing features using Vanilla JS, React, and TypeScript',
-      'Performed bug fixes and code reviews',
-      'Collaborated with experience designers and developers across design, development, QA, launch, and maintenance',
+      'Performed code reviews and bug fixes, helping maintain code quality across the team',
+      'Collaborated closely with designers and developers across the full design-to-launch lifecycle',
     ],
     skills: [
       'React',
@@ -83,7 +83,7 @@ export const experience: ExperienceEntry[] = [
     period: 'Sep 2014 — May 2015',
     current: false,
     summary:
-      'First internship - building Bootstrap-based web applications and supporting cross-browser testing.',
+      'First internship — building Bootstrap-based web applications and supporting cross-browser testing.',
     highlights: [
       'Maintained existing web applications',
       'Built web applications using Bootstrap',
