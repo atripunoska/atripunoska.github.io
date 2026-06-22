@@ -7,7 +7,7 @@ import type {
 import { validateContactForm } from '../lib/validateContactForm';
 import { trackEvent } from '../lib/analytics';
 
-const FORM_ENDPOINT = '';
+const FORM_ENDPOINT = 'https://formspree.io/f/meebqgpb';
 
 const initialValues: ContactFormValues = { name: '', email: '', message: '' };
 
