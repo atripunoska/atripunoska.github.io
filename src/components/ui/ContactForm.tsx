@@ -1,76 +1,14 @@
-import { useState, type FormEvent } from 'react';
-import { trackEvent } from '../../lib/analytics';
-
-type Status = 'idle' | 'submitting' | 'success' | 'error';
-
-interface FormErrors {
-  name?: string;
-  email?: string;
-  message?: string;
-}
-
-const FORM_ENDPOINT = '';
-
-function validate(values: {
-  name: string;
-  email: string;
-  message: string;
-}): FormErrors {
-  const errors: FormErrors = {};
-  if (!values.name.trim()) errors.name = 'required';
-  if (!values.email.trim()) {
-    errors.email = 'required';
-  } else if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(values.email)) {
-    errors.email = 'invalid';
-  }
-  if (!values.message.trim()) errors.message = 'required';
-  return errors;
-}
+import { useContactForm } from '../../hooks/useContactForm';
 
 export function ContactForm() {
-  const [values, setValues] = useState({ name: '', email: '', message: '' });
-  const [errors, setErrors] = useState<FormErrors>({});
-  const [status, setStatus] = useState<Status>('idle');
-
-  const handleChange =
-    (field: keyof typeof values) =>
-    (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
-      setValues((prev) => ({ ...prev, [field]: e.target.value }));
-      // clear that field's error as soon as the person starts fixing it
-      setErrors((prev) => ({ ...prev, [field]: undefined }));
-    };
-
-  const handleSubmit = async (e: FormEvent) => {
-    e.preventDefault();
-    const validationErrors = validate(values);
-    setErrors(validationErrors);
-    if (Object.keys(validationErrors).length > 0) return;
-
-    if (!FORM_ENDPOINT) {
-      console.warn(
-        'FORM_ENDPOINT is not set — see the TODO in ContactForm.tsx',
-      );
-      setStatus('error');
-      return;
-    }
-
-    setStatus('submitting');
-    try {
-      const res = await fetch(FORM_ENDPOINT, {
-        method: 'POST',
-        headers: {
-          'Content-Type': 'application/json',
-          Accept: 'application/json',
-        },
-        body: JSON.stringify(values),
-      });
-      if (!res.ok) throw new Error('Submission failed');
-      trackEvent('contact', 'submit_success');
-      setStatus('success');
-    } catch {
-      setStatus('error');
-    }
-  };
+  const {
+    values,
+    errors,
+    status,
+    handleChange,
+    handleSubmit,
+    formEndpointConfigured,
+  } = useContactForm();
 
   if (status === 'success') {
     return (
@@ -110,7 +48,7 @@ export function ContactForm() {
           >
             Name
             {errors.name && (
-              <span className='text-[#ff8a7a]' id='contact-name-error'>
+              <span className='text-danger' id='contact-name-error'>
                 {errors.name}
               </span>
             )}
@@ -126,8 +64,8 @@ export function ContactForm() {
             aria-invalid={Boolean(errors.name)}
             aria-describedby={errors.name ? 'contact-name-error' : undefined}
             className={`bg-transparent border-0 border-b py-2.5 font-inherit text-fg transition-colors
-              focus-visible:outline-none focus-visible:border-fg
-              ${errors.name ? 'border-[#ff8a7a]' : 'border-line-strong'}`}
+              focus-visible:outline-none focus-visible:border-fg focus-visible:ring-2 focus-visible:ring-fg/30 focus-visible:rounded-sm
+              ${errors.name ? 'border-danger' : 'border-line-strong'}`}
           />
         </div>
 
@@ -138,7 +76,7 @@ export function ContactForm() {
           >
             Email
             {errors.email && (
-              <span className='text-[#ff8a7a]' id='contact-email-error'>
+              <span className='text-danger' id='contact-email-error'>
                 {errors.email}
               </span>
             )}
@@ -154,8 +92,8 @@ export function ContactForm() {
             aria-invalid={Boolean(errors.email)}
             aria-describedby={errors.email ? 'contact-email-error' : undefined}
             className={`bg-transparent border-0 border-b py-2.5 font-inherit text-fg transition-colors
-              focus-visible:outline-none focus-visible:border-fg
-              ${errors.email ? 'border-[#ff8a7a]' : 'border-line-strong'}`}
+              focus-visible:outline-none focus-visible:border-fg focus-visible:ring-2 focus-visible:ring-fg/30 focus-visible:rounded-sm
+              ${errors.email ? 'border-danger' : 'border-line-strong'}`}
           />
         </div>
       </div>
@@ -167,7 +105,7 @@ export function ContactForm() {
         >
           What are you working on?
           {errors.message && (
-            <span className='text-[#ff8a7a]' id='contact-message-error'>
+            <span className='text-danger' id='contact-message-error'>
               {errors.message}
             </span>
           )}
@@ -184,24 +122,24 @@ export function ContactForm() {
           }
           rows={5}
           className={`bg-transparent border-0 border-b py-2.5 font-inherit text-fg resize-none transition-colors
-            focus-visible:outline-none focus-visible:border-fg
-            ${errors.message ? 'border-[#ff8a7a]' : 'border-line-strong'}`}
+            focus-visible:outline-none focus-visible:border-fg focus-visible:ring-2 focus-visible:ring-fg/30 focus-visible:rounded-sm
+            ${errors.message ? 'border-danger' : 'border-line-strong'}`}
         />
       </div>
 
       <div className='flex justify-between items-center gap-4 mt-5'>
         {status === 'error' && (
-          <span className='font-mono text-[11px] text-[#ff8a7a]' role='alert'>
-            {FORM_ENDPOINT
+          <span className='font-mono text-[11px] text-danger' role='alert'>
+            {formEndpointConfigured
               ? 'Something went wrong — try again, or email me directly.'
-              : 'Form not wired up yet — see TODO in ContactForm.tsx'}
+              : 'Form not wired up yet — see TODO in useContactForm.ts'}
           </span>
         )}
 
         <button
           type='submit'
           disabled={status === 'submitting'}
-          className='ml-auto inline-flex items-center gap-2 bg-fg text-bg border border-fg rounded-default px-5 py-3.5 transition-colors hover:bg-accent hover:text-accent-ink hover:border-accent disabled:opacity-60'
+          className='ml-auto inline-flex items-center gap-2 bg-fg text-bg border border-fg rounded-default px-5 py-3.5 transition-colors hover:bg-accent hover:text-accent-ink hover:border-accent disabled:opacity-60 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-fg focus-visible:ring-offset-2 focus-visible:ring-offset-bg'
         >
           <span>{status === 'submitting' ? 'Sending…' : 'Send message'}</span>
           <svg
