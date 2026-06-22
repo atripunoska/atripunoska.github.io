@@ -5,6 +5,7 @@ import { Experience } from './components/sections/Experience';
 import { Hero } from './components/sections/Hero';
 import { Skills } from './components/sections/Skills';
 import { Work } from './components/sections/Work';
+import { CursorFollower } from './components/ui/CursorFollower';
 import { useAnalytics } from './hooks/useAnalytics';
 
 function App() {
@@ -12,10 +13,10 @@ function App() {
 
   return (
     <div className='bg-bg text-fg min-h-screen font-sans'>
+      <CursorFollower />
       <Topbar />
       <SideRail />
-
-      <main className='pt-4'>
+      <main>
         <Hero />
         <Work />
         <Skills />

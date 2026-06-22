@@ -35,7 +35,6 @@ export function Portrait() {
 
       <div className='flex justify-between mt-3.5 font-mono text-[11px] tracking-[0.06em] uppercase text-fg-muted'>
         <span>Ana Tripunoska</span>
-        <span>MMXXVI</span>
       </div>
     </div>
   );
